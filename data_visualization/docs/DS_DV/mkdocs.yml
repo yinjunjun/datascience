@@ -1,0 +1,5 @@
+site_name: DATS 2102
+nav:
+  - Home: index.md
+  - About: about.md
+theme: readthedocs
