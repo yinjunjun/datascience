@@ -1,15 +1,20 @@
 # Welcome to DATS 2102
+<iframe src="D3Blocks.html" height="200px" width="710px", frameBorder="0"></iframe>
 
 ## Course highlights
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* `Data Science with Python` - Create a new project.
+* `Data Visualization` - Start the live-reloading docs server.
+* `Statistical, Graph, Text, and Image` - Build the documentation site.
+* `Geospatial` - Print help message and exit.
 
-## Project layout
+## Prerequisite
 
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+## Lecture 1
+
+## Lecture 2

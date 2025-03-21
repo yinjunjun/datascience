@@ -1,0 +1,14 @@
+Tabular data:
+	numerical and categorical
+
+
+Geospatial:
+	Maps
+	Interactive
+
+Top modeling:
+	BERTopic
+	Word cloud
+
+Graph:
+community detections
