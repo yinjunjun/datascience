@@ -4,9 +4,8 @@
 **Email**: [j.yin@gwu.edu](mailto:j.yin@gwu.edu)  
 **Semester**: Fall 2025  
 **Dates**: 08/25/25 – 12/08/25  
-**Class Time**: Tuesday & Thursday, 11:10am – 12:25pm  
-**Location**: Tompkins Hall (TOMP) 107, 725 23rd Street NW  
-**Office Hours**: Wednesday, 11:00am – 12:00pm (or by appointment)  
+**Class Time**: Tuesday & Thursday  
+**Office Hours**: (Details in Blackboard)    
 **Office Location**: 2036 H St NW, Room 309
 
 ---

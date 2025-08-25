@@ -1,16 +1,8 @@
 # Home
 Welcome to Data Visualiztion for Data Science (DATS 2012)
-## Modules
+## Weekly Modules
 
-* `xx` - xxx
-* `xx` - xx
-* `xx` - xx.
-* `xx` - xx.
+* `Week 1` - [Getting Started](weekly/module_week_1_getting_started.md)
 
 ## Data Sources
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        syllabus.md
-        ...       # Other markdown pages, images and other files.
+    Will be listed incrementally
