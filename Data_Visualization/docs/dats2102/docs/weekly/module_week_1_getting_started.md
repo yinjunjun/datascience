@@ -53,6 +53,7 @@ As data science projects grow in size and complexity, the ability to craft clear
 - [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
 - [data.gov](https://www.data.gov/)
 - [GeoPandas Sample Datasets](https://geopandas.org/en/stable/getting_started/introduction.html#sample-data)
+- [Social Explorer](https://www.socialexplorer.com/) 
 
 ---
 
@@ -83,11 +84,19 @@ As data science projects grow in size and complexity, the ability to craft clear
 
 ## 🧭 Lecture Outline
 
-1. Course overview & syllabus tour
-2. Why visualization in data science? (truthfulness, clarity, audience)
-3. Notebook workflow: cells, markdown, restart & run all, saving
-4. First dataset in `pandas` (CSV → DataFrame → quick EDA)
-5. First plots: `matplotlib` bar/line; `seaborn` scatter/hist
+### Session 1 (75 minutes)
+
+1. Course overview & syllabus tour (15 min)
+2. Why visualization in data science? (truthfulness, clarity, audience) (15 min)
+3. Environment setup: conda + Jupyter walkthrough, troubleshooting (30 min)
+4. First dataset in `pandas`: load CSV → DataFrame → quick EDA (15 min)
+
+### Session 2 (75 minutes)
+
+1. Recap + Q&A on environment setup (10 min)
+2. Notebook workflow: cells, markdown, restart & run all, saving (20 min)
+3. Basic plotting: `matplotlib` bar/line; `seaborn` scatter/histogram (30 min)
+4. Guided practice with `penguins` dataset: scatterplot, pairplot activity (15 min)
 
 ---
 
@@ -182,5 +191,6 @@ ax.set(title="Penguins: Flipper vs Body Mass", xlabel="Flipper length (mm)", yla
 
 This section, for example, lists everything you should verify before submitting your work for Week 1.
 
--
 
+
+---
