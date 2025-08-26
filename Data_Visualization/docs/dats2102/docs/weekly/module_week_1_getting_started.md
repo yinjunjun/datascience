@@ -90,6 +90,7 @@ As data science projects grow in size and complexity, the ability to craft clear
 2. Why visualization in data science? (truthfulness, clarity, audience) (15 min)
 3. Environment setup: conda + Jupyter walkthrough, troubleshooting (30 min)
 4. First dataset in `pandas`: load CSV → DataFrame → quick EDA (15 min)
+5. Sample data 1 ([customers_1000.csv](customers_1000.csv)); Sample data 2 ([life_journey_data.csv](life_journey_data.csv))
 
 ### Session 2 (75 minutes)
 
