@@ -90,7 +90,6 @@ As data science projects grow in size and complexity, the ability to craft clear
 2. Why visualization in data science? (truthfulness, clarity, audience) (15 min)
 3. Environment setup: conda + Jupyter walkthrough, troubleshooting (30 min)
 4. First dataset in `pandas`: load CSV → DataFrame → quick EDA (15 min)
-5. Sample data 1 ([customers_1000.csv](customers_1000.csv)); Sample data 2 ([life_journey_data.csv](life_journey_data.csv))
 
 ### Session 2 (75 minutes)
 
@@ -98,12 +97,14 @@ As data science projects grow in size and complexity, the ability to craft clear
 2. Notebook workflow: cells, markdown, restart & run all, saving (20 min)
 3. Basic plotting: `matplotlib` bar/line; `seaborn` scatter/histogram (30 min)
 4. Guided practice with `penguins` dataset: scatterplot, pairplot activity (15 min)
+5. Sample data 1 ([customers_1000.csv](customers_1000.csv)); Sample data 2 ([life_journey_data.csv](life_journey_data.csv)), Sample data 3 ([unemployment-x](unemployment-x.csv))  
+6. Check out the detailed instructions in a [Notebook](week1_session2.html) and download the [week1_session2.ipynb](week1_session2.ipynb)
 
 ---
 
 ## 💻 Starter Notebook Snippets
 
-### Load a tiny dataset
+### Load a tiny dataset ([download the tab-separated file (tsv) version](cities.tsv))
 
 ```python
 import pandas as pd
