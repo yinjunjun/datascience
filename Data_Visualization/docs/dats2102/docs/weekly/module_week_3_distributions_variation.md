@@ -67,6 +67,9 @@ Check that you can load the iris dataset and render a histogram before class.
 4. Workshop: students choose dataset, produce 2–3 distribution plots, peer feedback (20 min)
 
 ---
+## You can refer to the [Jupyter Notebook template](week3/week3_hands_on_template.ipynb)
+
+---
 
 ## 💻 Starter Notebook Snippets
 
