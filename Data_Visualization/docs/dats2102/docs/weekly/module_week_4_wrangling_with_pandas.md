@@ -1,7 +1,3 @@
----
-
----
-
 # Week 4 — Wrangling with pandas
 
 > Learning how to clean, transform, and prepare data for effective visualization.

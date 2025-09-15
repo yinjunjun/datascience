@@ -1,4 +1,4 @@
-# Module – Data Sources (Weeks 1–4)
+# Data Sources (Weeks 1–4)
 
 This module provides a consolidated list of recommended data sources from Weeks 1–4. Students are encouraged to explore these datasets for hands-on exercises, projects, and further exploration in data visualization.
 
