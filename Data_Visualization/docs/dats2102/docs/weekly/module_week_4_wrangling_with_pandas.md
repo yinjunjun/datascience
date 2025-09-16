@@ -51,7 +51,7 @@ pip install pandas matplotlib seaborn
 2. Selection and filtering operations (20 min)
 3. GroupBy and aggregation (20 min)
 4. Intro to joining and merging: **concepts and syntax** (15 min)
-5. Hands-on with NYC Taxi dataset (20 min)
+5. Hands-on with NYC Taxi dataset (20 min). Download the files from [here](week4/file_list.md)
 
 
 
