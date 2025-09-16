@@ -101,7 +101,7 @@ trips['pickup_datetime'] = pd.to_datetime(trips['pickup_datetime'])
 
 ---
 
-## 🏠 Homework (Due before Week 5)
+## 🏠 Homework (Due next Thursday, Sept 25)
 
 1. Select a dataset with at least 5 columns.
 2. Perform the following in a notebook:
