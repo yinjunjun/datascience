@@ -61,7 +61,7 @@ pip install pandas matplotlib seaborn
 2. Reshaping data: pivot, melt, stack/unstack (25 min)
 3. Working with datetime and categorical variables (20 min)
 4. Merging and joining multiple datasets (20 min)
-5. Download the [Jupyter Notebook for the session](week4/week4_session2_hands_on_student.ipynb)
+5. Download the [Jupyter Notebook](week4/week4_session2_hands_on_student.ipynb) and the [additional population table](week4/nyc_population_2024.csv) for the session.
 
 ---
 
