@@ -55,12 +55,13 @@ pip install pandas matplotlib seaborn
 
 
 
-### Session 2 (75 min)
+### Session 2 (75 min - Hands-On)
 
 1. Recap & troubleshooting (10 min)
 2. Reshaping data: pivot, melt, stack/unstack (25 min)
 3. Working with datetime and categorical variables (20 min)
 4. Merging and joining multiple datasets (20 min)
+5. Download the [Jupyter Notebook for the session](week4/week4_session2_hands_on_student.ipynb)
 
 ---
 
