@@ -61,7 +61,7 @@ pip install seaborn matplotlib pandas
 2. Redesign bad charts into effective versions (30 min)
 3. Guided exercise: compare encodings using simulated data (20 min)
 4. Workshop: students bring prior homework plots and improve them (15 min)
-
+5. Download the [Jupyter Notebook](week5/Week5_Session2_HandsOn_class.ipynb) 
 ---
 
 ## 💻 Starter Notebook Snippets
