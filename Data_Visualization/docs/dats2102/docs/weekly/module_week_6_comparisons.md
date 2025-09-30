@@ -56,6 +56,7 @@ First, ensure that the virtual environment is properly created and activated. Th
 3. Slope charts for before/after and rank changes (15 min)
 4. Scale, baseline, and normalization (indexing to 100, percent change, per‑capita) (20 min)
 5. Small multiples and faceting; ordering and labeling for clarity (15 min)
+6. Download the Jupyter Notebook and data used in lecture from [this webpage](week6/file_list.md)
 
 ### Session 2 (75 min — Hands-on Focus)
 
