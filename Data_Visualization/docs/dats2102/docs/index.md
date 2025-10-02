@@ -8,6 +8,7 @@ Welcome to Data Visualiztion for Data Science (DATS 2102)
 * `Week 4` - [Wrangling with Pandas](weekly/module_week_4_wrangling_with_pandas.md)
 * `Week 5` - [Perception and Principles](weekly/module_week_5_perception_principles.md)
 * `Week 6` - [Comparisons](weekly/module_week_6_comparisons.md)
+* `Mid-term` - [Mid-term Project](weekly/mid_term_project.md)
 
 
 
