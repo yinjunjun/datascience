@@ -64,6 +64,7 @@ First, ensure that the virtual environment is properly created and activated. Th
 2. Build a slope chart for a before/after dataset (20 min)
 3. Create a small multiples view with `FacetGrid` (20 min)
 4. Mini‑workshop: add annotations, reorder categories, and test alternative scales (20 min)
+5. Download the [Jupyter Notebook](week6/Week06_HandsOn_Session2.ipynb) for this session.
 
 ---
 
