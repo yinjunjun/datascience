@@ -97,7 +97,7 @@ plt.show()
 
 ---
 
-## 🏠 Homework (Due next Thursday, Oct 2)
+## 🏠 Homework (Due next Friday, Oct 3)
 
 1. Find a poorly designed chart (for example, a truncated y-axis bar chart from a news article, a rainbow-colored heatmap in a research paper, or an infographic with distorted area encodings). 
 2. Recreate the chart faithfully in Python.
