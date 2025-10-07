@@ -62,6 +62,7 @@ First, make sure the virtual environment is properly created and activated. Then
 6. Adding labels and annotations in Matplotlib & Seaborn
 7. Redesign a cluttered chart with better labeling
 8. Create a table in pandas and format it for readability
+9. Download the hands-on [Jupyter Notebook](week7/week7_hands_on.ipynb)
 
 ---
 
