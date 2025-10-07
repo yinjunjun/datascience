@@ -63,6 +63,8 @@ First, make sure the virtual environment is properly created and activated. Then
 7. Redesign a cluttered chart with better labeling
 8. Create a table in pandas and format it for readability
 9. Download the hands-on [Jupyter Notebook](week7/week7_hands_on.ipynb)
+10. Download the extra [Jupyter Notebook for table formatting](week7/week7_hands_on_table_formatting.ipynb)
+
 
 ---
 
