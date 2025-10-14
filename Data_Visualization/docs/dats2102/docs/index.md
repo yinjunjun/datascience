@@ -10,6 +10,7 @@ Welcome to Data Visualiztion for Data Science (DATS 2102)
 * `Week 6` - [Comparisons](weekly/module_week_6_comparisons.md)
 * `Mid-term` - [Mid-term Project](weekly/mid_term_project.md)
 * `Week 7` - [Text, Labels, and Tables](weekly/module_week_7_text_labels_tables.md)
+* `Week 8` - [Mapping I & II](weekly/module_week_8_mapping_i_ii.md)
 
 
 
