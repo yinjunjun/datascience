@@ -118,7 +118,7 @@ df.style.set_table_styles([
 
 ---
 
-## 🏠 Homework (Due next Thursday, Oct 16)
+## 🏠 Homework (Due Oct 19)
 
 1. Select a dataset (sports, election, or financial) and create:
    - One visualization with clear **title, labels, and at least two annotations**.
