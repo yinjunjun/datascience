@@ -184,7 +184,7 @@ result = polys.join(counts).fillna({'count':0})
 
 ---
 
-## 🏠 Homework (due next class unless noted in Canvas)
+## 🏠 Homework (Due next Tuesday, Oct 28)
 
 1. Pick a geographic unit (country/state/county/tract) + a topic.
 2. Build a **reproducible pipeline** (notebook) that includes:
@@ -192,7 +192,7 @@ result = polys.join(counts).fillna({'count':0})
    - One **interactive map** (Folium or Plotly) with at least two layers (e.g., choropleth + points) and tooltips.
    - At least **one join** (spatial or attribute) and appropriate normalization.
    - A **150–250 word** reflection on design choices, denominators, classification, CRS, and limitations.
-3. Submit notebook + exported PNG/SVG + HTML(s).
+3. Submit `.ipynb` and `.html`.
 
 **Rubric (10 pts)**
 
@@ -205,5 +205,10 @@ result = polys.join(counts).fillna({'count':0})
 
 ## ✅ Submission Checklist
 
--
+Before submitting, make sure:
 
+- Your assignment has fulfilled all the basic requirements listed above.
+
+- Use Quarto to render the notebook into HTML and zip the files for submission.
+
+- Double-check the visualizations and your reflections in the HTML are properly organized and displayed.
