@@ -132,6 +132,7 @@ Notes:
   2. enrich with ACS denominator,
   3. build an interactive map with two layers,
   4. 3–5 sentence reflection on design choices + limitations.
+  5. **Download** the [Jupyter Notebook and Data](week8/hands_on_session2.zip)
 
 ---
 
