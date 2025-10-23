@@ -26,6 +26,7 @@ We will discuss the use of color in sequential, diverging, and categorical scale
 
 - *Fundamentals of Data Visualization* — chapters on color and perception.
 - [ColorBrewer2](https://colorbrewer2.org/) — tool for choosing effective color schemes.
+- [Colorcet](https://colorcet.holoviz.org/index.html) - Perceptually accurate 256-color colormaps
 - [Adobe Color](https://color.adobe.com/create/color-wheel) — create custom palettes.
 - [Coblis — Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 - [Accessible Data Visualization Guide (W3C)](https://www.w3.org/WAI/tutorials/images/complex/)
@@ -53,20 +54,15 @@ Confirm you can load sample datasets and apply color palettes using Seaborn and 
 
 ## 🧭 Lecture Outline
 
-### Session 1 (75 min — Theory Focus)
+### Session 1 (Theory + Hands-on)
 
-1. Introduction: Why color matters in visualization (10 min)
-2. Color theory basics — hue, saturation, brightness (15 min)
-3. Types of color schemes — sequential, diverging, categorical (20 min)
-4. Color perception & accessibility — common pitfalls (15 min)
-5. Demonstration: testing palettes with simulators and contrast checkers (15 min)
-
-### Session 2 (75 min — Hands-on Focus)
-
-1. Experiment with Seaborn and Matplotlib color palettes (20 min)
-2. Create side-by-side examples: good vs poor palette use (20 min)
-3. Apply ColorBrewer and Colorcet palettes to the previous week’s map visualizations (20 min)
-4. Workshop: redesign one of your past charts for color accessibility (15 min)
+1. Introduction: Why color matters in visualization
+2. Color theory basics — hue, saturation, brightness
+3. Types of color schemes — sequential, diverging, categorical
+4. Color perception & accessibility — common pitfalls
+5. Experiment with Seaborn and Matplotlib color palettes
+6. Apply ColorBrewer and Colorcet palettes to the previous week’s map visualizations
+4. **Download** the [Jupyter Notebook and Data](week9/week9.zip)
 
 ---
 
