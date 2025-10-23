@@ -123,7 +123,7 @@ plt.show()
 
 ---
 
-## 🏠 Homework (Due next Thursday, Oct 30)
+## 🏠 Homework (Due next Monday, Nov 3)
 
 1. Choose one of your visualizations from a previous week and redesign it to improve color and accessibility.
 2. Include:
