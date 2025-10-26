@@ -76,10 +76,9 @@ This is a 3-credit course. Students are expected to engage in 2.5 hours of direc
 | Assignment                         | Weight |
 | ---------------------------------- | ------ |
 | Weekly Notebooks & Exercises       | 40%    |
-| Mid-Semester Visualization Project | 15%    |
-| Final Project                      | 25%    |
+| Mid-Semester Visualization Project | 20%    |
+| Final Project                      | 30%    |
 | Participation & Peer Feedback      | 10%    |
-| Quizzes (2 total)                  | 10%    |
 
 ---
 

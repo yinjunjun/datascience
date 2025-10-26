@@ -112,7 +112,7 @@
 
 ---
 
-## Week 8 — Mapping I
+## Week 8 — Mapping I & II
 **Focus:** Fundamentals of geographic data visualization.  
 **Learning Objectives:**
 - Create choropleth maps and understand coordinate reference systems.
