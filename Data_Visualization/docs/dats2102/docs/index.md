@@ -12,7 +12,7 @@ Welcome to Data Visualiztion for Data Science (DATS 2102)
 * `Week 7` - [Text, Labels, and Tables](weekly/module_week_7_text_labels_tables.md)
 * `Week 8` - [Mapping I & II](weekly/module_week_8_mapping_i_ii.md)
 * `Week 9` - [Color & Accessibility](weekly/module_week_9_color_accessibility.md)
-
+* `Week 10` - [Relationships & Modeling](weekly/module_week_10_relationships_modeling.md)
 
 ## Data Sources
 *    Please find useful and recommended data sources from the [data sources page](ds/data_sources_module.md)
