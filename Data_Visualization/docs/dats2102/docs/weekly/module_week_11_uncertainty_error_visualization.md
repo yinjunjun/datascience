@@ -63,7 +63,7 @@ Verify that Seaborn is configured to display confidence intervals and that Matpl
 2. Adding confidence bands around regression lines
 3. Simulating sampling distributions and bootstrap intervals
 4. Improve one of your previous plots by including uncertainty
-
+5. Download the hands-on [Jupyter Notebook](week11/week11_uncertainty_visualization.ipynb) 
 ---
 
 ## 💻 Starter Notebook Snippets

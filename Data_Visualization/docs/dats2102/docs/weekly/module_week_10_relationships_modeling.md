@@ -68,6 +68,7 @@ Confirm you can run regression visualizations and calculate correlations using S
 4. Visualizing residuals and diagnostic plots (15 min)
 5. Mini‑workshop: interpret one key relationship in your dataset (5 min)
 6. **Download** the [Jupyter Notebook](week10/Week10_relationships_modeling_2.ipynb)
+7. A **Working version of linked plotly plot** can be [downloaded here](week10/linked_plotly_plots.ipynb)
 
 ---
 
