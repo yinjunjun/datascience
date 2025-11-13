@@ -65,6 +65,8 @@ Confirm you can train a simple classifier, generate predictions, and render eval
 3. Visualize feature importances or SHAP-like explanations (15 min)
 4. Generate word clouds and BERTopic clusters for NLP data (15 min)
 5. Mini-workshop: interpret model predictions visually (5 min)
+6. [Download the demo files here](week12/week12.zip)
+
 
 ---
 
