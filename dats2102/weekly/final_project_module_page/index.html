@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Final Project — DATS 2102: Data Visualization for Data Science - DATS 2102</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">DATS 2102</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../syllabus/" class="nav-link">Syllabus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course_modules/" class="nav-link">Modules</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#final-project-dats-2102-data-visualization-for-data-science" class="nav-link">Final Project — DATS 2102: Data Visualization for Data Science</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#purpose-scope" class="nav-link">🎯 Purpose &amp; Scope</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#learning-objectives" class="nav-link">✅ Learning Objectives</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#project-tracks-mix-thoughtfully" class="nav-link">🧵 Project Tracks (Mix thoughtfully)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#required-deliverables-submit-all" class="nav-link">📦 Required Deliverables (submit all)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#milestones-timeline" class="nav-link">🗓️ Milestones &amp; Timeline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#data-sources-suggested" class="nav-link">🔍 Data Sources (suggested)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#allowed-tools" class="nav-link">🧰 Allowed Tools</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#quality-expectations" class="nav-link">🧪 Quality Expectations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#grading-rubric-40-pts-total" class="nav-link">🧮 Grading Rubric (40 pts total)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#presentation-guidelines-78-minutes" class="nav-link">🗣️ Presentation Guidelines (7–8 minutes)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#collaboration-ai-and-academic-integrity" class="nav-link">🤝 Collaboration, AI, and Academic Integrity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#submission-checklist" class="nav-link">✅ Submission Checklist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tips-for-success" class="nav-link">💡 Tips for Success</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="final-project-dats-2102-data-visualization-for-data-science">Final Project — DATS 2102: Data Visualization for Data Science</h1>
+<blockquote>
+<p>A capstone demonstrating your end‑to‑end visualization workflow: question → data → wrangling → analysis → visuals → narrative.</p>
+</blockquote>
+<hr />
+<h2 id="purpose-scope">🎯 Purpose &amp; Scope</h2>
+<p>The final project synthesizes everything you’ve learned across the course. You will identify a compelling question, gather/curate data, apply rigorous wrangling, design effective visualizations (static and/or interactive), and communicate clear insights for a non‑expert audience.</p>
+<hr />
+<h2 id="learning-objectives">✅ Learning Objectives</h2>
+<p>By the end, you will be able to:</p>
+<ul>
+<li>Frame an analytical question and select appropriate data sources.</li>
+<li>Apply robust <strong>pandas</strong> wrangling (selection/filtering, sorting, groupby+aggregation, joins/merges, tidy reshaping).</li>
+<li>Design visuals aligned to purpose: distributions, comparisons, relationships, uncertainty (Weeks 3–11).</li>
+<li>Integrate specialized techniques as appropriate: <strong>mapping</strong> (Week 8), <strong>color &amp; accessibility</strong> (Week 9), <strong>ML/NLP visualizations</strong> (Week 12).</li>
+<li>Communicate a coherent data story with clear text, labels, and annotations (Week 7).</li>
+<li>Ensure reproducibility and ethical, accessible practice throughout.</li>
+</ul>
+<hr />
+<h2 id="project-tracks-mix-thoughtfully">🧵 Project Tracks (Mix thoughtfully)</h2>
+<ul>
+<li><strong>A. Data Story (EDA to Insight):</strong> A narrative with 6–10 well‑designed figures revealing a substantive finding.</li>
+<li><strong>B. Map‑Based Analysis:</strong> Spatial joins/classification; 2+ choropleths and at least one interactive map (Folium/Plotly). Discuss projection/CRS choices.</li>
+<li><strong>C. Interactive Mini‑Dashboard:</strong> A focused multi‑view interface (Plotly, Panel, or simple Jupyter widgets) with linked visuals and annotations.</li>
+<li><strong>D. ML/NLP Visualization:</strong> Train a simple model; show feature importance, confusion matrix/ROC, and an NLP visualization (word cloud or topic clusters).</li>
+</ul>
+<hr />
+<h2 id="required-deliverables-submit-all">📦 Required Deliverables (submit all)</h2>
+<ol>
+<li>
+<p><strong>Jupyter Notebook(s)</strong> with narrative markdown and all figures.</p>
+</li>
+<li>
+<p><strong>Quarto rendered HTML(s) of the notebook(s).</strong></p>
+</li>
+<li>
+<p><strong>A data folder or data access instructions</strong> (URLs, retrieval scripts). If restricted, include a synthetic sample and schema.</p>
+</li>
+<li>
+<p><strong>Data dictionary</strong> (variables, units, definitions, any transformations).</p>
+</li>
+<li>
+<p><strong>Slide deck (7–8 minutes)</strong>  for in‑class presentation (PDF or PPTX).</p>
+</li>
+<li>
+<p>A recorded short <strong>video/audio (1 to 3 minutes)</strong> for demonstrating your work (e.g., using Zoom).</p>
+</li>
+<li>
+<p><strong>Optional:</strong> publish your work via GitHub Pages or Quarto Pub and include the URL in the submission. </p>
+</li>
+</ol>
+<hr />
+<h2 id="milestones-timeline">🗓️ Milestones &amp; Timeline</h2>
+<ul>
+<li><strong>Finals Week:</strong> In‑class presentation + final submission of all artifacts.</li>
+</ul>
+<hr />
+<h2 id="data-sources-suggested">🔍 Data Sources (suggested)</h2>
+<ul>
+<li><strong>Open Data DC</strong>, <strong>Our World in Data</strong>, <strong>Gapminder</strong>, <strong>FiveThirtyEight</strong>, World Bank, BLS/BEA, NOAA, US DOT BTS, or vetted institutional repositories.</li>
+<li>Your own research/organizational data (ensure permission and anonymization if needed).</li>
+</ul>
+<blockquote>
+<p><strong>Cite all datasets with links and access dates</strong> in your README and slides.</p>
+</blockquote>
+<hr />
+<h2 id="allowed-tools">🧰 Allowed Tools</h2>
+<ul>
+<li><strong>Core:</strong> Python (pandas, numpy, matplotlib, seaborn, plotly), Jupyter/Quarto.</li>
+<li><strong>Spatial (optional):</strong> geopandas, folium, mapclassify.</li>
+<li><strong>ML/NLP (optional):</strong> scikit‑learn, wordcloud, BERTopic (or similar).</li>
+<li><strong>Design &amp; accessibility:</strong> ColorBrewer/Colorcet, contrast checkers; adhere to Week 9 guidance.</li>
+</ul>
+<hr />
+<h2 id="quality-expectations">🧪 Quality Expectations</h2>
+<ul>
+<li><strong>Audience‑appropriate</strong> explanations; avoid jargon without definitions.</li>
+<li><strong>Effective encodings</strong> and <strong>color choices</strong>; legends/direct labels; informative titles and captions.</li>
+<li><strong>Uncertainty</strong> shown where appropriate (error bars, bands, bootstrap summaries).</li>
+<li><strong>Accessibility:</strong> palette choices that remain interpretable with color‑vision deficiencies; sufficient contrast; alt text in slides where feasible.</li>
+<li><strong>Reproducibility:</strong> clean execution top‑to‑bottom; deterministic seeds; clear env instructions.</li>
+<li><strong>Ethics:</strong> respect license/terms; anonymize sensitive fields; discuss limitations and potential biases.</li>
+</ul>
+<hr />
+<h2 id="grading-rubric-40-pts-total">🧮 Grading Rubric (40 pts total)</h2>
+<ul>
+<li><strong>Problem Framing &amp; Relevance (5 pts):</strong> Clear question, audience, and motivation.</li>
+<li><strong>Data Acquisition &amp; Ethics (4 pts):</strong> Credible sources, citations, permissions/privacy considerations.</li>
+<li><strong>Wrangling &amp; Reproducibility (6 pts):</strong> Correct, readable code using selection/sorting, groupby+agg, joins, tidy reshaping; runnable notebook &amp; env notes.</li>
+<li><strong>Visualization Quality &amp; Variety (10 pts):</strong> Appropriate chart choices (distributions, comparisons, relationships, uncertainty; maps/ML/NLP as relevant), labeling/annotations, narrative flow.</li>
+<li><strong>Analysis &amp; Insight (7 pts):</strong> Sound reasoning, limitations addressed, meaningful takeaways.</li>
+<li><strong>Communication &amp; Writing (4 pts):</strong> Clarity of markdown narrative, captions, and organization; slide design.</li>
+<li><strong>Presentation &amp; Q&amp;A (4 pts):</strong> Timing, delivery, visual clarity, ability to answer questions.</li>
+</ul>
+<hr />
+<h2 id="presentation-guidelines-78-minutes">🗣️ Presentation Guidelines (7–8 minutes)</h2>
+<ul>
+<li>Open with the problem and why it matters (≤ 60 seconds).</li>
+<li>Show <strong>3–5 strongest visuals</strong>; narrate what the viewer should notice.</li>
+<li>Include at least one slide on <strong>methods/wrangling</strong> (brief) and one on <strong>limitations &amp; next steps</strong>.</li>
+<li>End with a <strong>single insight slide</strong> (one sentence + supporting figure).</li>
+</ul>
+<hr />
+<h2 id="collaboration-ai-and-academic-integrity">🤝 Collaboration, AI, and Academic Integrity</h2>
+<ul>
+<li>Follow course <strong>AI policy</strong>: AI tools may assist with <strong>scaffolding</strong> (formatting code, minor debugging, grammar). They may <strong>not</strong> fabricate results or replace your own analysis/interpretation. Disclose any AI assistance in the README.</li>
+<li>Cite all data, code snippets, and external visuals. Plagiarism or undisclosed AI‑generated work violates university policy.</li>
+</ul>
+<hr />
+<h2 id="submission-checklist">✅ Submission Checklist</h2>
+<p>Before submitting on Blackboard, ensure:</p>
+<ul>
+<li>Your project has fulfilled all the basic requirements listed above.</li>
+<li>Used Quarto to render the notebook into HTML and zip the files for submission.</li>
+<li>Double-check the visualizations and your reflections in the HTML are properly organized and displayed.</li>
+<li>Do not forget the README file, the slides, and the short video/audio</li>
+</ul>
+<hr />
+<h2 id="tips-for-success">💡 Tips for Success</h2>
+<ul>
+<li>Start with a sketch of your story and a list of figures you’ll need.</li>
+<li>Iterate: rough plots → refine encodings/labels → polish.</li>
+<li>Prefer fewer, better figures over many similar ones.</li>
+<li>Keep code cells small and well‑commented; use functions where helpful.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

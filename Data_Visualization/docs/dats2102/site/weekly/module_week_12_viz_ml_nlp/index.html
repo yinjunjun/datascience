@@ -99,7 +99,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#homework-due-thursday-november-28" class="nav-link">🏠 Homework (Due Thursday, November 28)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#homework-due-monday-december-1st" class="nav-link">🏠 Homework (Due Monday, December 1st)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -152,7 +152,8 @@
 <hr />
 <h2 id="setup-checklist">🛠️ Setup Checklist</h2>
 <p>Ensure your environment includes:</p>
-<pre><code class="language-bash">pip install scikit-learn matplotlib seaborn wordcloud bertopic numpy pandas
+<pre><code class="language-bash">pip install scikit-learn matplotlib seaborn wordcloud bertopic numpy pandas  
+pip install jupyter_compare_view datasets umap-learn hdbscan sentence-transformers
 </code></pre>
 <p>Confirm you can train a simple classifier, generate predictions, and render evaluation plots.</p>
 <hr />
@@ -172,7 +173,8 @@
 <li>Visualize feature importances or SHAP-like explanations (15 min)</li>
 <li>Generate word clouds and BERTopic clusters for NLP data (15 min)</li>
 <li>Mini-workshop: interpret model predictions visually (5 min)</li>
-<li><a href="../week12/week12.zip">Download the demo files here</a></li>
+<li><a href="../week12/week12.zip">Download the demo files for ML classification here</a></li>
+<li><a href="../week12/Week12_Visualization_for_ML_NLP2.ipynb">Download the demo files NLP Topic Modeling here</a></li>
 </ol>
 <hr />
 <h2 id="starter-notebook-snippets">💻 Starter Notebook Snippets</h2>
@@ -238,34 +240,37 @@ model.visualize_topics()
 <li>Discuss visual explainability: how do these visualizations build model trust?</li>
 </ul>
 <hr />
-<h2 id="homework-due-thursday-november-28">🏠 Homework (Due Thursday, November 28)</h2>
+<h2 id="homework-due-monday-december-1st">🏠 Homework (Due Monday, December 1st)</h2>
 <ol>
-<li>Choose either a structured dataset (classification/regression) <strong>or</strong> an NLP text dataset.</li>
+<li>Choose either a structured dataset (classification/regression) <strong>or</strong> an NLP text dataset from Hugging Face (ag = load_dataset("ag_news")).</li>
+<li></li>
 <li>Produce:</li>
-<li>One <strong>feature importance</strong> or <strong>coefficient</strong> plot.</li>
+<li>One <strong>feature importance</strong> plot.</li>
 <li>One <strong>model evaluation visualization</strong> (confusion matrix or ROC curve).</li>
-<li>One <strong>text visualization</strong> (word cloud or BERTopic topic cluster).</li>
+<li>One <strong>text visualization</strong> (word cloud, BERTopic topic cluster, or BERTopic Topic Word Scores).</li>
 <li>Include a 200–300 word reflection on how visualization supports model interpretability.</li>
 <li>Submit <code>.ipynb</code> and <code>.html</code>.</li>
 </ol>
-<p><strong>Rubric (10 pts)</strong></p>
-<ul>
-<li>Correct and complete implementation of model visualizations (4)</li>
-<li>Insightful reflection on interpretability and trust (3)</li>
-<li>Clarity and labeling of visuals (2)</li>
-<li>Code quality and reproducibility (1)</li>
-</ul>
 <hr />
 <h2 id="optional-extensions">🧩 Optional Extensions</h2>
 <ul>
-<li>Explore SHAP or LIME visualizations for feature explanations.</li>
 <li>Create animated confusion matrices or topic evolution plots.</li>
-<li>Compare multiple models visually using ROC or precision-recall curves.</li>
+<li>Compare the performance of different classifiers.</li>
 </ul>
 <hr />
 <h2 id="submission-checklist">✅ Submission Checklist</h2>
 <p>Before submitting, make sure:</p>
-<p>-</p></div>
+<ul>
+<li>
+<p>Your assignment has fulfilled all the basic requirements listed above.</p>
+</li>
+<li>
+<p>Use Quarto to render the notebook into HTML and zip the files for submission.</p>
+</li>
+<li>
+<p>Double-check the visualizations and your reflections in the HTML are properly organized and displayed.</p>
+</li>
+</ul></div>
             </div>
         </div>
 

@@ -41,7 +41,8 @@ Modern machine learning and NLP models generate complex outputs — from feature
 Ensure your environment includes:
 
 ```bash
-pip install scikit-learn matplotlib seaborn wordcloud bertopic numpy pandas
+pip install scikit-learn matplotlib seaborn wordcloud bertopic numpy pandas  
+pip install jupyter_compare_view datasets umap-learn hdbscan sentence-transformers
 ```
 
 Confirm you can train a simple classifier, generate predictions, and render evaluation plots.
@@ -65,7 +66,8 @@ Confirm you can train a simple classifier, generate predictions, and render eval
 3. Visualize feature importances or SHAP-like explanations (15 min)
 4. Generate word clouds and BERTopic clusters for NLP data (15 min)
 5. Mini-workshop: interpret model predictions visually (5 min)
-6. [Download the demo files here](week12/week12.zip)
+6. [Download the demo files for ML classification here](week12/week12.zip)
+7. [Download the demo files NLP Topic Modeling here](week12/Week12_Visualization_for_ML_NLP2.ipynb)
 
 
 ---
@@ -147,30 +149,23 @@ model.visualize_topics()
 
 ---
 
-## 🏠 Homework (Due Thursday, November 28)
+## 🏠 Homework (Due Monday, December 1st)
 
-1. Choose either a structured dataset (classification/regression) **or** an NLP text dataset.
-2. Produce:
-   - One **feature importance** or **coefficient** plot.
+1. Choose either a structured dataset (classification/regression) **or** an NLP text dataset from Hugging Face (ag = load_dataset("ag_news")).
+2. 
+3. Produce:
+   - One **feature importance** plot.
    - One **model evaluation visualization** (confusion matrix or ROC curve).
-   - One **text visualization** (word cloud or BERTopic topic cluster).
-3. Include a 200–300 word reflection on how visualization supports model interpretability.
-4. Submit `.ipynb` and `.html`.
-
-**Rubric (10 pts)**
-
-- Correct and complete implementation of model visualizations (4)
-- Insightful reflection on interpretability and trust (3)
-- Clarity and labeling of visuals (2)
-- Code quality and reproducibility (1)
+   - One **text visualization** (word cloud, BERTopic topic cluster, or BERTopic Topic Word Scores).
+4. Include a 200–300 word reflection on how visualization supports model interpretability.
+5. Submit `.ipynb` and `.html`.
 
 ---
 
 ## 🧩 Optional Extensions
 
-- Explore SHAP or LIME visualizations for feature explanations.
 - Create animated confusion matrices or topic evolution plots.
-- Compare multiple models visually using ROC or precision-recall curves.
+- Compare the performance of different classifiers.
 
 ---
 
@@ -178,5 +173,8 @@ model.visualize_topics()
 
 Before submitting, make sure:
 
--
+- Your assignment has fulfilled all the basic requirements listed above.
 
+- Use Quarto to render the notebook into HTML and zip the files for submission.
+
+- Double-check the visualizations and your reflections in the HTML are properly organized and displayed.
