@@ -131,3 +131,7 @@ Before submitting on Blackboard, ensure:
 - Prefer fewer, better figures over many similar ones.
 - Keep code cells small and well‑commented; use functions where helpful.
 
+---
+## 🏠 Submission Deadline (Monday, December 15)
+
+
