@@ -42,11 +42,11 @@ By the end, you will be able to:
 
 4. **Data dictionary** (variables, units, definitions, any transformations).
 
-5. **Slide deck (7–8 minutes)**  for in‑class presentation (PDF or PPTX).
+5. **Slide deck (7–8 minutes worth of slides, note that it is not the presentation time)** for your presentation (PDF or PPTX).
 
 6. A recorded short **video/audio (1 to 3 minutes)** for demonstrating your work (e.g., using Zoom).
 
-7. **Optional:** publish your work via GitHub Pages or Quarto Pub and include the URL in the submission. 
+7. **Optional:** publish your work via GitHub Pages or Quarto Pub and include the URL in the submission. 
 
 ---
 
@@ -132,6 +132,6 @@ Before submitting on Blackboard, ensure:
 - Keep code cells small and well‑commented; use functions where helpful.
 
 ---
-## 🏠 Submission Deadline (Monday, December 15)
+## 🏠 Submission Deadline (Monday, December 15, 2025. Firm Deadline)
 
 
