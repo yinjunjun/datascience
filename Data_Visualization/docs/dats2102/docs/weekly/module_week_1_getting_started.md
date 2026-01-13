@@ -1,6 +1,6 @@
 # Week 1 — Getting Started
 
-> A Quarto/Panel-style module page for DATS 2102, implemented in Python/Jupyter.
+> Welcome to DATS 2102. Let's get started with the setup of the environment and the first steps in data visualization.
 
 ---
 

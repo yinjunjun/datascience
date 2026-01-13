@@ -3,7 +3,7 @@ Welcome to Data Visualiztion for Data Science (DATS 2102)
 ## Weekly Modules
 
 * `Week 1` - [Getting Started](weekly/module_week_1_getting_started.md)
-* `Week 2` - [Language of Graphs](weekly/module_week_2_language_of_graphs.md)
+<!-- * `Week 2` - [Language of Graphs](weekly/module_week_2_language_of_graphs.md)
 * `Week 3` - [Distributions and Variations](weekly/module_week_3_distributions_variation.md)
 * `Week 4` - [Wrangling with Pandas](weekly/module_week_4_wrangling_with_pandas.md)
 * `Week 5` - [Perception and Principles](weekly/module_week_5_perception_principles.md)
@@ -15,7 +15,7 @@ Welcome to Data Visualiztion for Data Science (DATS 2102)
 * `Week 10` - [Relationships & Modeling](weekly/module_week_10_relationships_modeling.md)
 * `Week 11` - [Uncertainty & Error Visualization](weekly/module_week_11_uncertainty_error_visualization.md)
 * `Week 12` - [Visualization for ML/NLP](weekly/module_week_12_viz_ml_nlp.md)
-* `Finals` - [Final Project](weekly/final_project_module_page.md)
+* `Finals` - [Final Project](weekly/final_project_module_page.md) -->
 
 ## Data Sources
-*    Please find useful and recommended data sources from the [data sources page](ds/data_sources_module.md)
+<!-- *    Please find useful and recommended data sources from the [data sources page](ds/data_sources_module.md) -->

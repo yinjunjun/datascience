@@ -2,10 +2,11 @@
 
 **Instructor**: Junjun Yin  
 **Email**: [j.yin@gwu.edu](mailto:j.yin@gwu.edu)  
-**Semester**: Fall 2025  
-**Dates**: 08/25/25 – 12/08/25  
+**Semester**: Spring 2026  
+**Dates**: 01/13/26 – 04/27/26  
 **Class Time**: Tuesday & Thursday  
-**Office Hours**: (Details in Blackboard)    
+**Location**: 212 Elliott School of International Affairs, 1957 E Street NW  
+**Office Hours**: (Details in Blackboard)  
 **Office Location**: 2036 H St NW, Room 309
 
 ---
@@ -25,7 +26,7 @@ As a result of completing this course, students will be able to:
 1. Process and tidy real-world data using `pandas`.
 2. Apply visual perception and design principles to create truthful, clear graphics.
 3. Visualize univariate, bivariate, and multivariate patterns; compare groups effectively.
-4. Map and analyze geographic data using `geopandas`, `contextily`, and `folium`/`plotly`.
+4. Map and analyze geographic data using `geopandas`,`folium`, and `plotly`.
 5. Visualize relationships and communicate model context and uncertainty.
 6. Build interactive, annotated visuals and simple data stories/dashboards.
 7. Apply visualization to ML & NLP tasks (feature importance, confusion matrices/ROC, word clouds, BERTopic topic maps, embedding plots).
@@ -38,7 +39,7 @@ This is a 3-credit course. Students are expected to engage in 2.5 hours of direc
 ---
 
 ## Required Tools and Texts
-**Tools**: Anaconda (or Python 3.10+), JupyterLab, VS Code, Sublime Text, PyCharm, Google Colab, or other tools that support Python programming and visualization.  
+**Tools**: Anaconda (or Python 3.10+), JupyterLab, VS Code, Google Colab, Quarto or other tools that support Python programming and visualization.  
 **Core Libraries**: pandas, numpy, matplotlib, seaborn, altair, plotly, geopandas, mapclassify, contextily, folium, scikit-learn, umap-learn, sentence-transformers, bertopic, wordcloud.
 
 **Documentation & Guides**:  
@@ -47,7 +48,8 @@ This is a 3-credit course. Students are expected to engage in 2.5 hours of direc
 - [Plotly](https://plotly.com/python/)  
 - [Altair](https://altair-viz.github.io/)  
 - [GeoPandas](https://geopandas.org/)  
-- [Pandas](https://pandas.pydata.org/docs/)
+- [Pandas](https://pandas.pydata.org/docs/)  
+- [Quarto](https://quarto.org/docs/reference/)
 
 **Texts**: No required textbook. Recommended: *Fundamentals of Data Visualization* by Claus O. Wilke (available free online) and *Storytelling with Data* by Cole Nussbaumer Knaflic.
 
@@ -63,7 +65,7 @@ This is a 3-credit course. Students are expected to engage in 2.5 hours of direc
 | 5 | Perception & Principles | Cleveland–McGill, preattentive features, clutter. |
 | 6 | Comparisons | Bars/dots/small multiples, ordering & baselines, log scales. |
 | 7 | Text, Labels, & Tables | Direct labeling, captions, tables. |
-| 8 | Mapping I | Choropleths, CRS, spatial joins, geopandas, mapclassify, folium. |
+| 8 | Mapping I & II | Choropleths, CRS, spatial joins, geopandas, mapclassify, folium. |
 | 9 | Color & Accessibility | Sequential/diverging/qualitative palettes, pitfalls. |
 | 10 | Relationships & Modeling | Scatter/line, smoothing, statsmodels, model checks. |
 | 11 | Uncertainty | Error bars, intervals, bootstrap visuals. |
@@ -75,9 +77,9 @@ This is a 3-credit course. Students are expected to engage in 2.5 hours of direc
 ## Assignments & Grading
 | Assignment                         | Weight |
 | ---------------------------------- | ------ |
-| Weekly Notebooks & Exercises       | 40%    |
+| Weekly Notebooks & Exercises       | 30%    |
 | Mid-Semester Visualization Project | 20%    |
-| Final Project                      | 30%    |
+| Final Project                      | 40%    |
 | Participation & Peer Feedback      | 10%    |
 
 ---
@@ -86,7 +88,7 @@ This is a 3-credit course. Students are expected to engage in 2.5 hours of direc
 The final project will synthesize the skills learned throughout the course. Students will:
 - Propose a project idea by Week 9.
 - Develop a prototype by Week 13.
-- Submit the final project by December 8.
+- Submit the final project by April 30.
 
 Requirements:
 - Multiple well-designed visualizations with an accompanying narrative.
