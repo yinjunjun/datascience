@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Modules - DATS 2102</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DATS 2102</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../syllabus/" class="nav-link">Syllabus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Modules</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../syllabus/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#dats-2102-data-visualization-for-data-science" class="nav-link">DATS 2102 — Data Visualization for Data Science</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#week-1-getting-started" class="nav-link">Week 1 — Getting Started</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-2-language-of-graphs" class="nav-link">Week 2 — Language of Graphs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-3-distributions-variation" class="nav-link">Week 3 — Distributions &amp; Variation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-4-wrangling-with-pandas" class="nav-link">Week 4 — Wrangling with pandas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-5-perception-principles" class="nav-link">Week 5 — Perception &amp; Principles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-6-comparisons" class="nav-link">Week 6 — Comparisons</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-7-text-labels-tables" class="nav-link">Week 7 — Text, Labels, &amp; Tables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-8-mapping-i-ii" class="nav-link">Week 8 — Mapping I &amp; II</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-9-color-accessibility" class="nav-link">Week 9 — Color &amp; Accessibility</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-10-relationships-modeling" class="nav-link">Week 10 — Relationships &amp; Modeling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-11-uncertainty" class="nav-link">Week 11 — Uncertainty</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#week-12-visualization-for-mlnlp" class="nav-link">Week 12 — Visualization for ML/NLP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#weeks-1314-final-project-workshops" class="nav-link">Weeks 13–14 — Final Project Workshops</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<hr />
+<h1 id="dats-2102-data-visualization-for-data-science">DATS 2102 — Data Visualization for Data Science</h1>
+<hr />
+<h2 id="week-1-getting-started">Week 1 — Getting Started</h2>
+<p><strong>Focus:</strong> Course introduction, importance of data visualization in data science, and environment setup.<br />
+<strong>Learning Objectives:</strong>
+- Understand visualization’s role in data analysis and communication.
+- Install Python, Jupyter, and core libraries.
+- Execute basic code and create markdown cells in Jupyter.
+- Produce first bar and scatter plots.<br />
+<strong>Datasets:</strong> Seaborn <code>penguins</code>, small CSVs (population, GDP).<br />
+<strong>Core Libraries:</strong> pandas, matplotlib, seaborn.<br />
+<strong>Lecture Topics:</strong>
+- What is data visualization and why it matters.
+- Overview of course structure and expectations.
+- Introduction to JupyterLab workflow.<br />
+<strong>In-Class Activities:</strong> Load dataset, inspect data, create bar and scatter plots.<br />
+<strong>Homework:</strong> Set up environment, explore CSV, produce two labeled plots with captions.</p>
+<hr />
+<h2 id="week-2-language-of-graphs">Week 2 — Language of Graphs</h2>
+<p><strong>Focus:</strong> Visual encodings, tidy data principles, grammar of graphics.<br />
+<strong>Learning Objectives:</strong>
+- Identify and apply core visual encodings (position, color, shape, size).
+- Reshape data into tidy format.
+- Use seaborn and altair for multi-encoding charts.<br />
+<strong>Datasets:</strong> Seaborn <code>tips</code>, Gapminder data.<br />
+<strong>Core Libraries:</strong> pandas, seaborn, altair.<br />
+<strong>Lecture Topics:</strong>
+- Mapping data to visual attributes.
+- Tidy data and why it matters.
+- Grammar of graphics overview.<br />
+<strong>In-Class Activities:</strong> Reshape and plot categorical vs. numerical data.<br />
+<strong>Homework:</strong> Create three visualizations using different encoding strategies, with explanations.</p>
+<hr />
+<h2 id="week-3-distributions-variation">Week 3 — Distributions &amp; Variation</h2>
+<p><strong>Focus:</strong> Visualizing univariate distributions and variation.<br />
+<strong>Learning Objectives:</strong>
+- Choose appropriate distribution plots.
+- Understand and apply binning, kernel density estimation, ECDF.
+<strong>Datasets:</strong> Flight delay data, iris dataset.<br />
+<strong>Core Libraries:</strong> seaborn, matplotlib.<br />
+<strong>Lecture Topics:</strong>
+- When to use histograms vs. KDEs vs. box/violin plots.
+- Understanding variability and spread.<br />
+<strong>In-Class Activities:</strong> Compare multiple distribution plot types.<br />
+<strong>Homework:</strong> Explore and visualize distributions in two datasets with narrative.</p>
+<hr />
+<h2 id="week-4-wrangling-with-pandas">Week 4 — Wrangling with pandas</h2>
+<p><strong>Focus:</strong> Data cleaning, transformation, and preparation for visualization.<br />
+<strong>Learning Objectives:</strong>
+- Select, filter, group, summarize, and reshape data.
+- Work with datetime and categorical data.<br />
+<strong>Datasets:</strong> NYC taxi trips sample, COVID-19 data.<br />
+<strong>Core Libraries:</strong> pandas, matplotlib.<br />
+<strong>Lecture Topics:</strong>
+- Data import and export.
+- Common data wrangling operations.<br />
+<strong>In-Class Activities:</strong> Group data by category and visualize aggregates.<br />
+<strong>Homework:</strong> Clean a messy dataset and create three informative charts.</p>
+<hr />
+<h2 id="week-5-perception-principles">Week 5 — Perception &amp; Principles</h2>
+<p><strong>Focus:</strong> Visual perception theory and chart design principles.<br />
+<strong>Learning Objectives:</strong>
+- Apply Cleveland–McGill perceptual rankings.
+- Recognize and fix misleading visualizations.<br />
+<strong>Datasets:</strong> Simulated comparison datasets.<br />
+<strong>Core Libraries:</strong> seaborn, matplotlib.<br />
+<strong>Lecture Topics:</strong>
+- How humans perceive visual encodings.
+- Common design pitfalls.<br />
+<strong>In-Class Activities:</strong> Redesign poor visualizations.<br />
+<strong>Homework:</strong> Select a misleading chart, redesign it, and explain improvements.</p>
+<hr />
+<h2 id="week-6-comparisons">Week 6 — Comparisons</h2>
+<p><strong>Focus:</strong> Comparing categories, groups, and time series.<br />
+<strong>Learning Objectives:</strong>
+- Create grouped bar charts, dot plots, slope charts.
+- Use small multiples effectively.<br />
+<strong>Datasets:</strong> World Bank indicators.<br />
+<strong>Core Libraries:</strong> seaborn, matplotlib, plotly.<br />
+<strong>Lecture Topics:</strong>
+- Designing fair comparisons.
+- Aligning scales and baselines.<br />
+<strong>In-Class Activities:</strong> Build comparison visuals using small multiples.<br />
+<strong>Homework:</strong> Compare groups in chosen dataset using 2+ visualization types.</p>
+<hr />
+<h2 id="week-7-text-labels-tables">Week 7 — Text, Labels, &amp; Tables</h2>
+<p><strong>Focus:</strong> Enhancing visuals with annotations and well-formatted tables.<br />
+<strong>Learning Objectives:</strong>
+- Apply direct labeling and meaningful captions.
+- Create clear and concise tables.<br />
+<strong>Datasets:</strong> Sports statistics.<br />
+<strong>Core Libraries:</strong> matplotlib, seaborn, pandas.<br />
+<strong>Lecture Topics:</strong>
+- Annotating charts for storytelling.
+- Formatting tables for clarity.<br />
+<strong>In-Class Activities:</strong> Annotate key data points in charts.<br />
+<strong>Homework:</strong> Create a labeled and captioned visual from dataset of choice.</p>
+<hr />
+<h2 id="week-8-mapping-i-ii">Week 8 — Mapping I &amp; II</h2>
+<p><strong>Focus:</strong> Fundamentals of geographic data visualization.<br />
+<strong>Learning Objectives:</strong>
+- Create choropleth maps and understand coordinate reference systems.
+- Join spatial and tabular datasets.<br />
+<strong>Datasets:</strong> US states shapefile, population data.<br />
+<strong>Core Libraries:</strong> geopandas, mapclassify, folium.<br />
+<strong>Lecture Topics:</strong>
+- Spatial joins.
+- Map classification schemes.<br />
+<strong>In-Class Activities:</strong> Produce a choropleth map from joined datasets.<br />
+<strong>Homework:</strong> Create thematic map for a real-world topic.</p>
+<hr />
+<h2 id="week-9-color-accessibility">Week 9 — Color &amp; Accessibility</h2>
+<p><strong>Focus:</strong> Effective and inclusive color usage in visualization.<br />
+<strong>Learning Objectives:</strong>
+- Choose appropriate color palettes.
+- Apply accessibility best practices.<br />
+<strong>Datasets:</strong> From previous assignments.<br />
+<strong>Core Libraries:</strong> seaborn, matplotlib, colorcet.<br />
+<strong>Lecture Topics:</strong>
+- Sequential, diverging, qualitative palettes.
+- Colorblind-safe schemes.<br />
+<strong>In-Class Activities:</strong> Recolor existing charts for better accessibility.<br />
+<strong>Homework:</strong> Revise a prior visualization with improved color design.</p>
+<hr />
+<h2 id="week-10-relationships-modeling">Week 10 — Relationships &amp; Modeling</h2>
+<p><strong>Focus:</strong> Visualizing relationships and model fit.<br />
+<strong>Learning Objectives:</strong>
+- Plot scatterplots with regression lines.
+- Visualize residuals and model diagnostics.<br />
+<strong>Datasets:</strong> Housing prices dataset.<br />
+<strong>Core Libraries:</strong> seaborn, statsmodels, matplotlib.<br />
+<strong>Lecture Topics:</strong>
+- Visualizing correlation and causation.
+- Checking model assumptions visually.<br />
+<strong>In-Class Activities:</strong> Fit and visualize a simple regression.<br />
+<strong>Homework:</strong> Analyze and visualize a bivariate relationship with commentary.</p>
+<hr />
+<h2 id="week-11-uncertainty">Week 11 — Uncertainty</h2>
+<p><strong>Focus:</strong> Representing uncertainty in data visualizations.<br />
+<strong>Learning Objectives:</strong>
+- Add error bars and confidence intervals.
+- Visualize sampling variability.<br />
+<strong>Datasets:</strong> Polling data.<br />
+<strong>Core Libraries:</strong> seaborn, matplotlib.<br />
+<strong>Lecture Topics:</strong>
+- Why uncertainty matters.
+- Techniques for communicating uncertainty.<br />
+<strong>In-Class Activities:</strong> Compare plots with and without uncertainty intervals.<br />
+<strong>Homework:</strong> Visualize uncertainty in selected dataset.</p>
+<hr />
+<h2 id="week-12-visualization-for-mlnlp">Week 12 — Visualization for ML/NLP</h2>
+<p><strong>Focus:</strong> Visualizing machine learning and NLP outputs.<br />
+<strong>Learning Objectives:</strong>
+- Plot feature importance, confusion matrices, and ROC curves.
+- Visualize topic clusters and word clouds.<br />
+<strong>Datasets:</strong> IMDB reviews, classification dataset.<br />
+<strong>Core Libraries:</strong> scikit-learn, matplotlib, seaborn, wordcloud, bertopic.<br />
+<strong>Lecture Topics:</strong>
+- Visualization in the ML workflow.
+- Visualizing high-dimensional data.<br />
+<strong>In-Class Activities:</strong> Train a small model, visualize predictions.<br />
+<strong>Homework:</strong> Create three ML-related visualizations from a chosen dataset.</p>
+<hr />
+<h2 id="weeks-1314-final-project-workshops">Weeks 13–14 — Final Project Workshops</h2>
+<p><strong>Focus:</strong> Final project preparation, peer review, and refinement.<br />
+<strong>Learning Objectives:</strong>
+- Integrate multiple visualization techniques into one narrative.
+- Polish charts for professional presentation.<br />
+<strong>Datasets:</strong> Student-chosen.<br />
+<strong>In-Class Activities:</strong> Peer feedback, troubleshooting, improving visuals.<br />
+<strong>Homework:</strong> Finalize and submit project with report and reproducible code.</p>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Week 8 — Mapping I &amp; II - DATS 2102</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">DATS 2102</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../syllabus/" class="nav-link">Syllabus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course_modules/" class="nav-link">Modules</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#week-8-mapping-i-ii" class="nav-link">Week 8 — Mapping I &amp; II</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#background-motivation" class="nav-link">📖 Background &amp; Motivation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#learning-objectives" class="nav-link">🔎 Learning Objectives</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#readings-resources" class="nav-link">📚 Readings &amp; Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#setup" class="nav-link">🛠️ Setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#session-1-mapping-i-foundations-choropleths-75-min" class="nav-link">🧭 Session 1 — Mapping I: Foundations &amp; Choropleths (≈75 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#session-2-mapping-ii-spatial-joins-enrichment-interactivity-75-min" class="nav-link">🧭 Session 2 — Mapping II: Spatial Joins, Enrichment &amp; Interactivity (≈75 min)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#starter-code-snippets" class="nav-link">💻 Starter Code (snippets)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#inclass-activities-both-sessions" class="nav-link">🧪 In‑Class Activities (both sessions)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#homework-due-next-tuesday-oct-28" class="nav-link">🏠 Homework (Due next Tuesday, Oct 28)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#submission-checklist" class="nav-link">✅ Submission Checklist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="week-8-mapping-i-ii">Week 8 — Mapping I &amp; II</h1>
+<p><em>Foundations &amp; Choropleths; Spatial Joins, Enrichment &amp; Interactivity</em></p>
+<h2 id="background-motivation">📖 Background &amp; Motivation</h2>
+<p>This two‑session module builds a solid foundation for geographic data visualization and then applies it to real analytical workflows. In <strong>Mapping I</strong>, students learn core geospatial concepts (data types, formats, and coordinate systems) and produce clear choropleth maps with appropriate normalization, classification, and legends. In <strong>Mapping II</strong>, students connect maps to real analysis tasks by performing spatial and attribute joins, enriching with socio‑economic context, and delivering interactive maps for exploration and communication.</p>
+<hr />
+<h2 id="learning-objectives">🔎 Learning Objectives</h2>
+<ul>
+<li>Distinguish vector vs. raster data; recognize common geospatial file formats (Shapefile, GeoJSON, TopoJSON, GeoPackage).</li>
+<li>Explain Coordinate Reference Systems (CRS) and projections; choose and document an appropriate CRS.</li>
+<li>Create choropleths with sensible normalization, classification, color, and legends.</li>
+<li>Perform spatial joins (point‑in‑polygon, polygon overlaps) and attribute joins on stable keys (e.g., FIPS/GEOID).</li>
+<li>Enrich maps with socio‑economic variables (e.g., ACS) and build interactive web maps.</li>
+</ul>
+<hr />
+<h2 id="readings-resources">📚 Readings &amp; Resources</h2>
+<ul>
+<li><strong>GeoPandas</strong> User Guide — <a href="https://geopandas.org/en/stable/docs/user_guide/">geopandas.org</a></li>
+<li><strong>PyGIS — Intro to GIS in Python</strong> — <a href="https://pygis.io/docs/a_intro.html">pygis.io/docs/a_intro.html</a></li>
+<li><strong>Folium</strong> Quickstart — <a href="https://python-visualization.github.io/folium/latest/">python-visualization.github.io/folium</a></li>
+<li><strong>Plotly Express</strong> Choropleth — <a href="https://plotly.com/python/choropleth-maps/">plotly.com/python/choropleth-maps</a></li>
+<li><strong>Claus Wilke</strong>, <em>Fundamentals of Data Visualization</em> (Geospatial) — <a href="https://clauswilke.com/dataviz/geospatial.html">clauswilke.com/dataviz/geospatial.html</a></li>
+<li><strong>ColorBrewer 2.0</strong> — <a href="https://colorbrewer2.org/">colorbrewer2.org</a></li>
+<li><strong>EPSG.io</strong> (CRS search) — <a href="https://epsg.io/">epsg.io</a></li>
+<li><strong>Census/ACS</strong> data portal — <a href="https://data.census.gov/">data.census.gov</a> ; <strong>Social Explorer</strong> — <a href="https://www.socialexplorer.com/home">socialexplorer.com/home</a></li>
+<li><strong>TopoJSON</strong> docs — <a href="https://github.com/topojson/topojson">github.com/topojson/topojson</a></li>
+</ul>
+<hr />
+<h2 id="setup">🛠️ Setup</h2>
+<p>Install/verify:</p>
+<pre><code class="language-bash">pip install geopandas folium plotly mapclassify pyproj shapely pandas matplotlib
+</code></pre>
+<p>Notes:</p>
+<ul>
+<li>If computing areas/lengths, reproject to an appropriate <strong>projected</strong> CRS (e.g., equal‑area).</li>
+<li>Interactive HTML maps (Folium/Plotly) load tiles/scripts at view time.</li>
+</ul>
+<hr />
+<h2 id="session-1-mapping-i-foundations-choropleths-75-min">🧭 Session 1 — Mapping I: Foundations &amp; Choropleths (≈75 min)</h2>
+<h3 id="1-why-map-when-not-to-map">1) Why map? When <em>not</em> to map</h3>
+<ul>
+<li>Use maps when spatial structure matters (clusters, corridors, gradients).</li>
+<li>Prefer <strong>rates/ratios</strong> over raw counts; preview MAUP &amp; ecological fallacy.</li>
+</ul>
+<h3 id="2-geographic-data-fundamentals">2) Geographic data fundamentals</h3>
+<ul>
+<li>Vector (points/lines/polygons/multiparts) vs Raster (continuous/categorical); resolution, extent.</li>
+</ul>
+<h3 id="3-file-formats">3) File formats</h3>
+<ul>
+<li><strong>Shapefile</strong> (.shp/.shx/.dbf/.prj) – common pitfalls: field name limits, encoding, missing .prj.</li>
+<li><strong>GeoJSON</strong> (WGS84 lon/lat); <strong>TopoJSON</strong> (shared arcs, smaller web payloads); GeoPackage, Parquet+WKB.</li>
+</ul>
+<h3 id="4-crs-projections">4) CRS &amp; projections</h3>
+<ul>
+<li>Geographic vs Projected CRS; angular vs linear units.</li>
+<li><strong>WGS84 (EPSG:4326)</strong> vs <strong>Web Mercator (EPSG:3857)</strong> vs <strong>Equal‑Area</strong> (e.g., <strong>ESRI:102003</strong> for CONUS).</li>
+<li>Distortions (area/distance/direction); document CRS in captions.</li>
+</ul>
+<h3 id="5-choropleths-principles">5) Choropleths: principles</h3>
+<ul>
+<li>Appropriate use: polygon‑level <strong>rates</strong> with clear denominators and time windows.</li>
+<li>Classification: <strong>Quantiles</strong>, <strong>Equal Interval</strong>, <strong>Natural Breaks (Jenks)</strong>, Std‑Dev; 4–7 bins.</li>
+<li>Color: sequential for ordered magnitudes; diverging for centered (±mean); avoid rainbow; accessible palettes.</li>
+<li>Legends &amp; captions: variable name + units, bin method, CRS, data period, source.</li>
+</ul>
+<h3 id="6-demos-brief">6) Demos (brief)</h3>
+<ul>
+<li><strong>GeoPandas + Matplotlib</strong>: static choropleth; export PNG/SVG.</li>
+<li><strong>Plotly Express</strong>: interactive choropleth with hover; export HTML.</li>
+<li><strong>Folium</strong>: tile basemap, tooltips/popups, layer control; export HTML.</li>
+<li><strong>Download</strong> the <a href="../week8/week8.zip">Jupyter Notebook and Data</a></li>
+</ul>
+<h3 id="7-miniexercise-1015-min">7) Mini‑exercise (10–15 min)</h3>
+<ul>
+<li>Given polygons + counts + population: make <strong>two</strong> choropleths (quantiles vs equal‑interval).</li>
+<li>Add a 3‑sentence note comparing how binning changes the story.</li>
+</ul>
+<hr />
+<h2 id="session-2-mapping-ii-spatial-joins-enrichment-interactivity-75-min">🧭 Session 2 — Mapping II: Spatial Joins, Enrichment &amp; Interactivity (≈75 min)</h2>
+<h3 id="1-spatial-joins">1) Spatial joins</h3>
+<ul>
+<li>Point‑in‑polygon (assign incidents/POIs to tracts), polygon‑to‑polygon (overlaps), nearest joins.</li>
+<li>GeoPandas <code>sjoin</code> predicates: <code>within</code>, <code>contains</code>, <code>intersects</code>; geometry validity &amp; CRS alignment.</li>
+</ul>
+<h3 id="2-attribute-joins-data-hygiene">2) Attribute joins &amp; data hygiene</h3>
+<ul>
+<li>Join on stable keys (FIPS/GEOID). Handle types, leading zeros, whitespace, duplicates, missing keys.</li>
+</ul>
+<h3 id="3-aggregation-normalization-and-stability">3) Aggregation, normalization, and stability</h3>
+<ul>
+<li>Dissolve/aggregate to analysis geography; <strong>per‑capita / per‑household / per‑area</strong> rates.</li>
+<li>Consider rate stabilization (mention: Empirical Bayes) for small populations.</li>
+</ul>
+<h3 id="4-socioeconomic-enrichment">4) Socio‑economic enrichment</h3>
+<ul>
+<li>Typical sources: <strong>ACS</strong> (income, education, housing, commute), <strong>CDC PLACES</strong>, <strong>BLS</strong>.</li>
+<li>Temporal alignment and definitional consistency.</li>
+</ul>
+<h3 id="5-interactive-mapping-patterns">5) Interactive mapping patterns</h3>
+<ul>
+<li>Layer toggles (choropleth + points), marker clustering, heatmaps (when appropriate).</li>
+<li>Filters (sliders/dropdowns), hover templates, annotations; geometry simplification &amp; TopoJSON for performance.</li>
+</ul>
+<h3 id="6-demos-brief_1">6) Demos (brief)</h3>
+<ul>
+<li><strong>Demo A</strong>: spatial join (points→polygons) → counts per polygon → normalized rate.</li>
+<li><strong>Demo B</strong>: attribute join with ACS; compute indicator; classify &amp; map.</li>
+<li><strong>Demo C</strong>: interactive Folium (choropleth + proportional symbols, tooltips, layer control).</li>
+<li><strong>Demo D</strong>: interactive Plotly/Mapbox; export standalone HTML.</li>
+</ul>
+<h3 id="7-inclass-activity">7) In‑class activity</h3>
+<ul>
+<li>Start‑to‑finish pipeline:</li>
+<li>spatial join incidents → polygons,</li>
+<li>enrich with ACS denominator,</li>
+<li>build an interactive map with two layers,</li>
+<li>3–5 sentence reflection on design choices + limitations.</li>
+<li><strong>Download</strong> the <a href="../week8/hands_on_session2.zip">Jupyter Notebook and Data</a></li>
+</ul>
+<hr />
+<h2 id="starter-code-snippets">💻 Starter Code (snippets)</h2>
+<pre><code class="language-python"># GeoPandas read + quick plot
+import geopandas as gpd
+polys = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+polys.to_crs(3857).plot(edgecolor='white')
+</code></pre>
+<pre><code class="language-python"># Attribute join on a key
+import pandas as pd
+attrs = pd.read_csv('attrs.csv')  # contains GEOID and a value
+joined = polys.merge(attrs, how='left', left_on='iso_a3', right_on='GEOID')
+</code></pre>
+<pre><code class="language-python"># Choropleth (static)
+joined.plot(column='rate_per_10k', cmap='Blues', legend=True, edgecolor='0.7')
+</code></pre>
+<pre><code class="language-python"># Plotly Express (interactive)
+import plotly.express as px
+import json
+geojson = json.loads(polys.to_json())
+fig = px.choropleth(joined, geojson=geojson, locations=joined.index,
+                    color='rate_per_10k', featureidkey='properties.index')
+fig.update_geos(fitbounds='locations', visible=False)
+fig.show()
+</code></pre>
+<pre><code class="language-python"># Spatial join (points → polygons)
+pts = gpd.read_file('points.geojson').to_crs(polys.crs)
+joined_pts = gpd.sjoin(pts, polys, predicate='within')
+counts = joined_pts.groupby('polygon_id').size().rename('count')
+result = polys.join(counts).fillna({'count':0})
+</code></pre>
+<hr />
+<h2 id="inclass-activities-both-sessions">🧪 In‑Class Activities (both sessions)</h2>
+<ul>
+<li>Work in pairs. Use provided notebook or your own dataset.</li>
+<li>Maintain a caption block for each map (CRS, data period, binning, source, denominator).</li>
+</ul>
+<hr />
+<h2 id="homework-due-next-tuesday-oct-28">🏠 Homework (Due next Tuesday, Oct 28)</h2>
+<ol>
+<li>Pick a geographic unit (country/state/county/tract) + a topic.</li>
+<li>Build a <strong>reproducible pipeline</strong> (notebook) that includes:</li>
+<li>One <strong>static choropleth</strong> with clear legend + caption.</li>
+<li>One <strong>interactive map</strong> (Folium or Plotly) with at least two layers (e.g., choropleth + points) and tooltips.</li>
+<li>At least <strong>one join</strong> (spatial or attribute) and appropriate normalization.</li>
+<li>A <strong>150–250 word</strong> reflection on design choices, denominators, classification, CRS, and limitations.</li>
+<li>Submit <code>.ipynb</code> and <code>.html</code>.</li>
+</ol>
+<p><strong>Rubric (10 pts)</strong></p>
+<ul>
+<li>Correct joins &amp; CRS handling (3)</li>
+<li>Sound normalization + clear classification/legend (3)</li>
+<li>Interactive map quality (layers, tooltips, usability) (2)</li>
+<li>Reflection clarity &amp; critique of limitations (2)</li>
+</ul>
+<hr />
+<h2 id="submission-checklist">✅ Submission Checklist</h2>
+<p>Before submitting, make sure:</p>
+<ul>
+<li>
+<p>Your assignment has fulfilled all the basic requirements listed above.</p>
+</li>
+<li>
+<p>Use Quarto to render the notebook into HTML and zip the files for submission.</p>
+</li>
+<li>
+<p>Double-check the visualizations and your reflections in the HTML are properly organized and displayed.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

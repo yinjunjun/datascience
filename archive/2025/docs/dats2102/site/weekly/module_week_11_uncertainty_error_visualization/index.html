@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Week 11 — Uncertainty &amp; Error Visualization - DATS 2102</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">DATS 2102</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../syllabus/" class="nav-link">Syllabus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../course_modules/" class="nav-link">Modules</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#week-11-uncertainty-error-visualization" class="nav-link">Week 11 — Uncertainty &amp; Error Visualization</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#background-motivation" class="nav-link">📖 Background &amp; Motivation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#learning-objectives" class="nav-link">🔎 Learning Objectives</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#readings-resources" class="nav-link">📚 Readings &amp; Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#setup-checklist" class="nav-link">🛠️ Setup Checklist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lecture-outline" class="nav-link">🧭 Lecture Outline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#starter-notebook-snippets" class="nav-link">💻 Starter Notebook Snippets</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#in-class-activity" class="nav-link">🧪 In-Class Activity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#homework-due-next-thursday-nov-13" class="nav-link">🏠 Homework (Due next Thursday, Nov 13)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#optional-extensions" class="nav-link">🧩 Optional Extensions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#submission-checklist" class="nav-link">✅ Submission Checklist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="week-11-uncertainty-error-visualization">Week 11 — Uncertainty &amp; Error Visualization</h1>
+<blockquote>
+<p>Communicating uncertainty, variability, and confidence through effective visual representations.</p>
+</blockquote>
+<hr />
+<h2 id="background-motivation">📖 Background &amp; Motivation</h2>
+<p>Data visualizations often emphasize what is known—but communicating what is <strong>uncertain</strong> is equally critical for honest and transparent storytelling. This week explores how to represent statistical uncertainty, variability, and measurement error using visual design. Students will learn how to use error bars, confidence bands, sampling distributions, and bootstrap visualizations to convey uncertainty clearly and responsibly.</p>
+<hr />
+<h2 id="learning-objectives">🔎 Learning Objectives</h2>
+<ul>
+<li>Understand the sources of uncertainty in data and models.</li>
+<li>Differentiate between standard deviation, standard error, and confidence interval.</li>
+<li>Visualize uncertainty with error bars, ribbons, and confidence bands.</li>
+<li>Communicate uncertainty effectively without misleading interpretation.</li>
+<li>Apply resampling or bootstrapping methods for visual inference.</li>
+</ul>
+<hr />
+<h2 id="readings-resources">📚 Readings &amp; Resources</h2>
+<ul>
+<li><em>Fundamentals of Data Visualization</em> — Chapter on uncertainty.</li>
+<li><a href="https://www.nature.com/articles/d41586-020-00548-9">Why We Should Visualize Uncertainty (Nature)</a></li>
+<li><a href="https://seaborn.pydata.org/tutorial/regression.html#statistical-estimation-and-bootstrapping">Seaborn confidence intervals documentation</a></li>
+<li><a href="https://informationisbeautiful.net/visualizations/visualizing-uncertainty/">Visualizing Uncertainty (Information is Beautiful)</a></li>
+</ul>
+<p><strong>Sample Data Sources:</strong></p>
+<ul>
+<li>Simulated sample means and bootstraps</li>
+<li>Gapminder GDP data (yearly changes)</li>
+<li>Experimental datasets (e.g., survey or sensor data)</li>
+</ul>
+<hr />
+<h2 id="setup-checklist">🛠️ Setup Checklist</h2>
+<p>Ensure your environment includes:</p>
+<pre><code class="language-bash">pip install seaborn matplotlib numpy pandas scipy
+</code></pre>
+<p>Verify that Seaborn is configured to display confidence intervals and that Matplotlib renders error bars correctly.</p>
+<hr />
+<h2 id="lecture-outline">🧭 Lecture Outline</h2>
+<h3 id="session-1-theory-focus">Session 1 (Theory Focus)</h3>
+<ol>
+<li>What is uncertainty? Sources in data collection and modeling</li>
+<li>Standard deviation, standard error, and confidence intervals</li>
+<li>Visual metaphors for uncertainty (error bars, ribbons, shaded regions)</li>
+<li>Common pitfalls: false precision, overlapping intervals, and transparency</li>
+<li>Case studies: how media and research visualize uncertainty</li>
+</ol>
+<h3 id="session-2-hands-on-focus">Session 2 (Hands-on Focus)</h3>
+<ol>
+<li>Plotting error bars with Seaborn and Matplotlib</li>
+<li>Adding confidence bands around regression lines</li>
+<li>Simulating sampling distributions and bootstrap intervals</li>
+<li>Improve one of your previous plots by including uncertainty</li>
+<li>Download the hands-on <a href="../week11/week11_uncertainty_visualization.ipynb">Jupyter Notebook</a> </li>
+</ol>
+<hr />
+<h2 id="starter-notebook-snippets">💻 Starter Notebook Snippets</h2>
+<h3 id="adding-error-bars">Adding error bars</h3>
+<pre><code class="language-python">import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Simulated means and standard errors
+groups = ['A','B','C','D']
+means = [20, 23, 25, 22]
+se = [1.5, 2.0, 1.2, 1.8]
+
+plt.bar(groups, means, yerr=se, capsize=5, color='#4e79a7')
+plt.title('Bar chart with error bars')
+plt.ylabel('Mean value')
+plt.show()
+</code></pre>
+<h3 id="confidence-intervals-with-seaborn">Confidence intervals with Seaborn</h3>
+<pre><code class="language-python">import seaborn as sns
+penguins = sns.load_dataset('penguins').dropna()
+sns.lmplot(data=penguins, x='flipper_length_mm', y='body_mass_g', ci=95)
+plt.title('Regression with 95% confidence interval')
+plt.show()
+</code></pre>
+<h3 id="bootstrap-sampling-visualization">Bootstrap sampling visualization</h3>
+<pre><code class="language-python">np.random.seed(42)
+data = np.random.normal(50, 10, 100)
+bootstrap_means = [np.mean(np.random.choice(data, size=100, replace=True)) for _ in range(1000)]
+
+sns.histplot(bootstrap_means, kde=True)
+plt.axvline(np.mean(data), color='red', linestyle='--', label='Observed mean')
+plt.title('Bootstrap sampling distribution of the mean')
+plt.legend()
+plt.show()
+</code></pre>
+<hr />
+<h2 id="in-class-activity">🧪 In-Class Activity</h2>
+<ul>
+<li>Compare bar charts with and without error bars — what changes in interpretation?</li>
+<li>Explore how sample size affects confidence interval width.</li>
+<li>Visualize a bootstrap sampling distribution and discuss its meaning.</li>
+<li>Redesign a visualization from your earlier project to include uncertainty representation.</li>
+</ul>
+<hr />
+<h2 id="homework-due-next-thursday-nov-13">🏠 Homework (Due next Thursday, Nov 13)</h2>
+<ol>
+<li>Select a dataset of your choice (or use one from a prior week).</li>
+<li>Produce:</li>
+<li>One <strong>bar or line chart</strong> with error bars or confidence bands.</li>
+<li>One <strong>bootstrap visualization</strong> or sampling distribution.</li>
+<li>A short (200–300 words) reflection on how uncertainty affects the interpretation of your results.</li>
+<li>Submit <code>.ipynb</code> and <code>.html</code>.</li>
+</ol>
+<p><strong>Rubric (10 pts)</strong></p>
+<ul>
+<li>Correct calculation and visualization of uncertainty (4)</li>
+<li>Clarity and labeling of intervals/bands (2)</li>
+<li>Quality of interpretation and reflection (3)</li>
+<li>Reproducibility and documentation (1)</li>
+</ul>
+<hr />
+<h2 id="optional-extensions">🧩 Optional Extensions</h2>
+<ul>
+<li>Compare 68%, 90%, and 95% confidence intervals visually.</li>
+<li>Add uncertainty bands to model predictions from Statsmodels.</li>
+<li>Visualize uncertainty in map-based data (e.g., population margins of error).</li>
+</ul>
+<hr />
+<h2 id="submission-checklist">✅ Submission Checklist</h2>
+<p>Before submitting, make sure:</p>
+<ul>
+<li>
+<p>Your assignment has fulfilled all the basic requirements listed above.</p>
+</li>
+<li>
+<p>Use Quarto to render the notebook into HTML and zip the files for submission.</p>
+</li>
+<li>
+<p>Double-check the visualizations and your reflections in the HTML are properly organized and displayed.</p>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
