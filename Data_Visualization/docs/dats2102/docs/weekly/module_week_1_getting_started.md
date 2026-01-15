@@ -60,43 +60,39 @@ As data science projects grow in size and complexity, the ability to craft clear
 ## 🛠️ Setup Checklist
 
 1. **Install** Anaconda or Miniconda.
-2. **Create/activate** environment:
-   ```bash
-   conda create -n dataviz python=3.12 -y
-   conda activate dataviz
-   ```
-3. **Install libraries** (CPU-friendly baseline):
-   ```bash
-   pip install pandas numpy matplotlib seaborn plotly altair geopandas
-   ```
-4. **Launch JupyterLab**:
-   ```bash
-   jupyter lab
-   ```
-5. (Optional) IDEs you can use: VS Code, PyCharm, Sublime Text; or run in Google Colab.
+2. **Create/activate** environment using terminal:  
+   `conda create -n dataviz python=3.12 -y`  
+   `conda activate dataviz`    
+3. **Install libraries** (CPU-friendly baseline):  
+   `pip install pandas numpy matplotlib seaborn plotly altair geopandas ipykernel jupyterlab`  
+4. **Launch JupyterLab**:  
+   `jupyter lab`  
+5. (Optional) IDEs you can use: VS Code (or Google Antigravity, Positron), PyCharm, Sublime Text; or run in Google Colab.
 
 **Troubleshooting**
 
-- If `geopandas` fails on Windows, try `conda install -c conda-forge geopandas`.
-- If Jupyter can’t see the env, run: `python -m ipykernel install --user --name dataviz --display-name "Python (dataviz)"`.
+- If `geopandas` fails on Windows, try:  
+`conda install -c conda-forge geopandas`.
+- If Jupyter can’t see the env, run:  
+`python -m ipykernel install --user --name dataviz --display-name "Python (dataviz)"`.
 
 ---
 
 ## 🧭 Lecture Outline
 
-### Session 1 (75 minutes)
+### Session 1
 
-1. Course overview & syllabus tour (15 min)
-2. Why visualization in data science? (truthfulness, clarity, audience) (15 min)
-3. Environment setup: conda + Jupyter walkthrough, troubleshooting (30 min)
-4. First dataset in `pandas`: load CSV → DataFrame → quick EDA (15 min)
+1. Course overview & syllabus tour
+2. Why visualization in data science? (truthfulness, clarity, audience)
+3. Environment setup: conda + Jupyter walkthrough, troubleshooting
+4. First dataset in `pandas`: load CSV → DataFrame → quick EDA
 
-### Session 2 (75 minutes)
+### Session 2
 
-1. Recap + Q&A on environment setup (10 min)
-2. Notebook workflow: cells, markdown, restart & run all, saving (20 min)
-3. Basic plotting: `matplotlib` bar/line; `seaborn` scatter/histogram (30 min)
-4. Guided practice with `penguins` dataset: scatterplot, pairplot activity (15 min)
+1. Recap + Q&A on environment setup
+2. Notebook workflow: cells, markdown, restart & run all, saving
+3. Basic plotting: `matplotlib` bar/line; `seaborn` scatter/histogram
+4. Guided practice with `penguins` dataset: scatterplot, pairplot activity
 5. Sample data 1 ([customers_1000.csv](customers_1000.csv)); Sample data 2 ([life_journey_data.csv](life_journey_data.csv)), Sample data 3 ([unemployment-x](unemployment-x.csv))  
 6. Check out the detailed instructions in a [Notebook](week1_session2.html) and download the [week1_session2.ipynb](week1_session2.ipynb)
 
@@ -162,7 +158,7 @@ ax.set(title="Penguins: Flipper vs Body Mass", xlabel="Flipper length (mm)", yla
 
 ---
 
-## 🏠 Homework (Due before Week 2)
+## 🏠 Homework
 
 1. Set up your environment and confirm you can open/run notebooks.
 2. Import a **CSV of your choice** and submit one notebook that includes:
@@ -170,7 +166,7 @@ ax.set(title="Penguins: Flipper vs Body Mass", xlabel="Flipper length (mm)", yla
    - Top 5 rows, `.info()`, and `.describe()`.
    - One **bar** or **histogram** plot, and one **scatter** plot.
    - A brief paragraph reflecting on one insight + one limitation of the data.
-3. Export notebook to HTML (`File → Save and Export Notebook As`) and upload both `.ipynb` and `.html`.
+3. Render notebook to HTML (`quarto preview <filename>.ipynb`) and upload zip file of `.ipynb`, `.html` and `_files` folder to Blackboard.
 
 **Rubric (10 pts)**
 

@@ -99,7 +99,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#homework-due-before-week-2" class="nav-link">🏠 Homework (Due before Week 2)</a>
+            <li class="nav-item" data-bs-level="2"><a href="#homework" class="nav-link">🏠 Homework</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -173,38 +173,37 @@
 <h2 id="setup-checklist">🛠️ Setup Checklist</h2>
 <ol>
 <li><strong>Install</strong> Anaconda or Miniconda.</li>
-<li><strong>Create/activate</strong> environment:
-   <code>bash
-   conda create -n dataviz python=3.12 -y
-   conda activate dataviz</code></li>
-<li><strong>Install libraries</strong> (CPU-friendly baseline):
-   <code>bash
-   pip install pandas numpy matplotlib seaborn plotly altair geopandas</code></li>
-<li><strong>Launch JupyterLab</strong>:
-   <code>bash
-   jupyter lab</code></li>
-<li>(Optional) IDEs you can use: VS Code, PyCharm, Sublime Text; or run in Google Colab.</li>
+<li><strong>Create/activate</strong> environment using terminal:<br />
+<code>conda create -n dataviz python=3.12 -y</code><br />
+<code>conda activate dataviz</code>    </li>
+<li><strong>Install libraries</strong> (CPU-friendly baseline):<br />
+<code>pip install pandas numpy matplotlib seaborn plotly altair geopandas ipykernel jupyterlab</code>  </li>
+<li><strong>Launch JupyterLab</strong>:<br />
+<code>jupyter lab</code>  </li>
+<li>(Optional) IDEs you can use: VS Code (or Google Antigravity, Positron), PyCharm, Sublime Text; or run in Google Colab.</li>
 </ol>
 <p><strong>Troubleshooting</strong></p>
 <ul>
-<li>If <code>geopandas</code> fails on Windows, try <code>conda install -c conda-forge geopandas</code>.</li>
-<li>If Jupyter can’t see the env, run: <code>python -m ipykernel install --user --name dataviz --display-name "Python (dataviz)"</code>.</li>
+<li>If <code>geopandas</code> fails on Windows, try:<br />
+<code>conda install -c conda-forge geopandas</code>.</li>
+<li>If Jupyter can’t see the env, run:<br />
+<code>python -m ipykernel install --user --name dataviz --display-name "Python (dataviz)"</code>.</li>
 </ul>
 <hr />
 <h2 id="lecture-outline">🧭 Lecture Outline</h2>
-<h3 id="session-1-75-minutes">Session 1 (75 minutes)</h3>
+<h3 id="session-1">Session 1</h3>
 <ol>
-<li>Course overview &amp; syllabus tour (15 min)</li>
-<li>Why visualization in data science? (truthfulness, clarity, audience) (15 min)</li>
-<li>Environment setup: conda + Jupyter walkthrough, troubleshooting (30 min)</li>
-<li>First dataset in <code>pandas</code>: load CSV → DataFrame → quick EDA (15 min)</li>
+<li>Course overview &amp; syllabus tour</li>
+<li>Why visualization in data science? (truthfulness, clarity, audience)</li>
+<li>Environment setup: conda + Jupyter walkthrough, troubleshooting</li>
+<li>First dataset in <code>pandas</code>: load CSV → DataFrame → quick EDA</li>
 </ol>
-<h3 id="session-2-75-minutes">Session 2 (75 minutes)</h3>
+<h3 id="session-2">Session 2</h3>
 <ol>
-<li>Recap + Q&amp;A on environment setup (10 min)</li>
-<li>Notebook workflow: cells, markdown, restart &amp; run all, saving (20 min)</li>
-<li>Basic plotting: <code>matplotlib</code> bar/line; <code>seaborn</code> scatter/histogram (30 min)</li>
-<li>Guided practice with <code>penguins</code> dataset: scatterplot, pairplot activity (15 min)</li>
+<li>Recap + Q&amp;A on environment setup</li>
+<li>Notebook workflow: cells, markdown, restart &amp; run all, saving</li>
+<li>Basic plotting: <code>matplotlib</code> bar/line; <code>seaborn</code> scatter/histogram</li>
+<li>Guided practice with <code>penguins</code> dataset: scatterplot, pairplot activity</li>
 <li>Sample data 1 (<a href="../customers_1000.csv">customers_1000.csv</a>); Sample data 2 (<a href="../life_journey_data.csv">life_journey_data.csv</a>), Sample data 3 (<a href="../unemployment-x.csv">unemployment-x</a>)  </li>
 <li>Check out the detailed instructions in a <a href="../week1_session2.html">Notebook</a> and download the <a href="../week1_session2.ipynb">week1_session2.ipynb</a></li>
 </ol>
@@ -253,7 +252,7 @@ ax = sns.scatterplot(data=penguins, x=&quot;flipper_length_mm&quot;, y=&quot;bod
 ax.set(title=&quot;Penguins: Flipper vs Body Mass&quot;, xlabel=&quot;Flipper length (mm)&quot;, ylabel=&quot;Body mass (g)&quot;)
 </code></pre>
 <hr />
-<h2 id="homework-due-before-week-2">🏠 Homework (Due before Week 2)</h2>
+<h2 id="homework">🏠 Homework</h2>
 <ol>
 <li>Set up your environment and confirm you can open/run notebooks.</li>
 <li>Import a <strong>CSV of your choice</strong> and submit one notebook that includes:</li>
@@ -261,7 +260,7 @@ ax.set(title=&quot;Penguins: Flipper vs Body Mass&quot;, xlabel=&quot;Flipper le
 <li>Top 5 rows, <code>.info()</code>, and <code>.describe()</code>.</li>
 <li>One <strong>bar</strong> or <strong>histogram</strong> plot, and one <strong>scatter</strong> plot.</li>
 <li>A brief paragraph reflecting on one insight + one limitation of the data.</li>
-<li>Export notebook to HTML (<code>File → Save and Export Notebook As</code>) and upload both <code>.ipynb</code> and <code>.html</code>.</li>
+<li>Render notebook to HTML (<code>quarto preview &lt;filename&gt;.ipynb</code>) and upload zip file of <code>.ipynb</code>, <code>.html</code> and <code>_files</code> folder to Blackboard.</li>
 </ol>
 <p><strong>Rubric (10 pts)</strong></p>
 <ul>
