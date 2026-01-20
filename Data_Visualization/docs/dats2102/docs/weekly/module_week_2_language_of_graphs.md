@@ -184,5 +184,8 @@ px.scatter(
 Before submitting, make sure:
 
 - Your assignment has fulfilled all the basic requirements listed above.
-- The visualizations in the Notebook and HTML are well displayed.
+
+- Use Quarto to render the notebook into HTML and zip the files for submission.
+
+- Double-check the visualizations and your reflections in the HTML are properly organized and displayed.
 

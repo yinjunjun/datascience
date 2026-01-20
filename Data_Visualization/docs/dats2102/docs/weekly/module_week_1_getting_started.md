@@ -93,8 +93,8 @@ As data science projects grow in size and complexity, the ability to craft clear
 2. Notebook workflow: cells, markdown, restart & run all, saving
 3. Basic plotting: `matplotlib` bar/line; `seaborn` scatter/histogram
 4. Guided practice with `penguins` dataset: scatterplot, pairplot activity
-5. Sample data 1 ([customers_1000.csv](customers_1000.csv)); Sample data 2 ([life_journey_data.csv](life_journey_data.csv)), Sample data 3 ([unemployment-x](unemployment-x.csv))  
-6. Check out the detailed instructions in a [Notebook](week1_session2.html) and download the [week1_session2.ipynb](week1_session2.ipynb)
+5. Sample data 1 ([customers_1000.csv](week1/customers_1000.csv)); Sample data 2 ([life_journey_data.csv](week1/life_journey_data.csv)), Sample data 3 ([unemployment-x](week1/unemployment-x.csv))  
+6. Check out the detailed instructions in a [Notebook](week1/week1_session2.html) and download the [week1_session2.ipynb](week1/week1_session2.ipynb)
 
 ---
 
@@ -187,8 +187,13 @@ ax.set(title="Penguins: Flipper vs Body Mass", xlabel="Flipper length (mm)", yla
 
 ## ✅ Submission Checklist
 
-This section, for example, lists everything you should verify before submitting your work for Week 1.
+Before submitting, make sure:
 
+- Your assignment has fulfilled all the basic requirements listed above.
+
+- Use Quarto to render the notebook into HTML and zip the files for submission.
+
+- Double-check the visualizations and your reflections in the HTML are properly organized and displayed.
 
 
 ---

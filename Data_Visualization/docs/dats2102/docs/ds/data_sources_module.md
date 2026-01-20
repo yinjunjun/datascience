@@ -1,4 +1,4 @@
-# Data Sources (Weeks 1–4)
+# Data Sources
 
 This module provides a consolidated list of recommended data sources from Weeks 1–4. Students are encouraged to explore these datasets for hands-on exercises, projects, and further exploration in data visualization.
 
@@ -16,7 +16,7 @@ This module provides a consolidated list of recommended data sources from Weeks 
 
 ---
 
-## Week 3 – Distributions and Comparisons
+<!-- ## Week 3 – Distributions and Comparisons
 - **[Iris Dataset (UCI ML Repository)](https://archive.ics.uci.edu/ml/datasets/iris):** Classic dataset of flower measurements, widely used for visualization demos.
 - **[Airline Flight Delay Data (Synthetic Example)](https://www.transtats.bts.gov/):** U.S. Bureau of Transportation Statistics flight data, often used for delay analysis.
 
@@ -32,3 +32,4 @@ This module provides a consolidated list of recommended data sources from Weeks 
 - **[ColorBrewer 2.0](https://colorbrewer2.org/):** Color palette selection tool, including colorblind-friendly options.
 - **[Real Python: ggplot in Python](https://realpython.com/ggplot-python/):** Tutorial on the grammar of graphics approach in Python.
 
+ -->
