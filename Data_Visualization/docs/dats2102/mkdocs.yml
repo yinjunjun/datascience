@@ -3,9 +3,7 @@ nav:
   - Home: index.md
   - Syllabus: syllabus.md
   - Modules: course_modules.md
-theme:
+theme:  
   name: mkdocs
   palette:
-    scheme: default
     primary: green
-    accent: indigo

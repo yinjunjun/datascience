@@ -151,7 +151,7 @@ px.scatter(
 
 ---
 
-## 🏠 Homework (Due next Thursday, Sept 11)
+## 🏠 Homework
 
 1. Pick one dataset from the sample sources or bring your own.
 2. Create **three different charts** using at least three distinct encodings.

@@ -100,7 +100,7 @@ As data science projects grow in size and complexity, the ability to craft clear
 
 ## 💻 Starter Notebook Snippets
 
-### Load a tiny dataset ([download the tab-separated file (tsv) version](cities.tsv))
+### Load a tiny dataset ([download the tab-separated file (tsv) version](week1/cities.tsv))
 
 ```python
 import pandas as pd
