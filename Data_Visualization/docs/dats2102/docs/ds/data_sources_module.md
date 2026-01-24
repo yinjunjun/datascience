@@ -16,13 +16,13 @@ This module provides a consolidated list of recommended data sources from Weeks 
 
 ---
 
-<!-- ## Week 3 – Distributions and Comparisons
+## Week 3 – Distributions and Comparisons
 - **[Iris Dataset (UCI ML Repository)](https://archive.ics.uci.edu/ml/datasets/iris):** Classic dataset of flower measurements, widely used for visualization demos.
 - **[Airline Flight Delay Data (Synthetic Example)](https://www.transtats.bts.gov/):** U.S. Bureau of Transportation Statistics flight data, often used for delay analysis.
 
 ---
 
-## Week 4 – Data Wrangling and Joins
+<!-- ## Week 4 – Data Wrangling and Joins
 - **[TidyTuesday Datasets](https://github.com/rfordatascience/tidytuesday):** Weekly datasets for data wrangling and visualization practice.
 - **[U.S. Census Data](https://data.census.gov/):** Demographic, housing, and economic data from the U.S. Census Bureau.
 

@@ -68,7 +68,7 @@ First make sure the virtual environment is properly created and activated. Then 
 4. Workshop and Q&A: applying tidy reshaping and encodings to provided datasets (10 min)
 
 ---
-## You can refer to the [Web page](week2/Week2_interactive_session.html) and download the [Jupyter Notebook](week2/Week2_interactive_session.ipynb)
+### You can refer to the [Web page](week2/Week2_interactive_session.html) and download the [Jupyter Notebook](week2/Week2_interactive_session.ipynb)
 
 ---
 ## 💻 Notebook Snippets
