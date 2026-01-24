@@ -155,10 +155,10 @@ px.scatter(
 
 1. Pick one dataset from the sample sources or bring your own.
 2. Create **three different charts** using at least three distinct encodings.
-3. For each chart, include:
-   - A brief description of what the chart shows.
-   - Why did you choose those encodings, and how did they help interpretation?
-   - One limitation or challenge in readability.
+3. For each chart, include:  
+   a. A brief description of what the chart shows.  
+   b. Why did you choose those encodings, and how did they help interpretation?  
+   c. One limitation or challenge in readability.  
 4. Submit `.ipynb` and `.html`  to Blackboard (You can zip the files together).
 
 **Rubric (10 pts)**

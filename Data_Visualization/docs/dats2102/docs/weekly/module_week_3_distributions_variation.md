@@ -112,15 +112,15 @@ plt.ylabel('ECDF')
 
 ---
 
-## 🏠 Homework (Due next Thursday, Sept 18)
+## 🏠 Homework (Due next Thursday)
 
-1. Select **two datasets** (one provided + one of your choice).
-2. For each dataset:
-   - Produce at least 3 distribution plots (histogram, KDE, ECDF, box/violin).
-   - Interpret shape, spread, skew, and outliers in markdown.
-   - Reflect on the pros/cons of each visualization type.
-   - Add at least one annotated chart highlighting a key pattern.
-3. Submit `.ipynb` and `.html` as a zip file.
+1. Select **one dataset** (one from the Sample Data Sources or one of your choice).
+2. For the dataset:  
+   a. Produce at least 3 distribution plots (histogram, KDE, ECDF, box/violin).  
+   b. Interpret shape, spread, skew, and outliers in markdown.  
+   c. Reflect on the pros/cons of each visualization type.  
+   d. Add at least one annotated chart highlighting a key pattern.  
+3. Use Quarto to render your notebook and submit the zip file.
 
 **Rubric (10 pts)**
 
@@ -146,5 +146,7 @@ plt.ylabel('ECDF')
 Before submitting, make sure:
 
 - Your assignment has fulfilled all the basic requirements listed above.
-- The visualizations in the Notebook and HTML are well displayed.
 
+- Use Quarto to render the notebook into HTML and zip the files for submission.
+
+- Double-check the visualizations and your reflections in the HTML are properly organized and displayed.
