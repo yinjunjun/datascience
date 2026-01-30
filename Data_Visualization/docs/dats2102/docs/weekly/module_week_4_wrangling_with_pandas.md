@@ -113,7 +113,7 @@ trips['pickup_datetime'] = pd.to_datetime(trips['pickup_datetime'])
    b. Apply at least 2 groupby operations with aggregations.  
    c. Reshape the dataset at least once (pivot, melt, etc.).  
    d. Create 3 visualizations from the cleaned dataset.  
-3. Submit `.ipynb` and `.html`.
+3. Use Quarto to render your notebook and submit the zip file.
 
 **Rubric (10 pts)**
 
