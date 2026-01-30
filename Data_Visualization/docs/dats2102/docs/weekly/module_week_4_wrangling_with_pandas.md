@@ -49,7 +49,7 @@ pip install pandas matplotlib seaborn
 
 1. Introduction to pandas DataFrames & Series
 2. Selection and filtering operations
-3. GroupBy and aggregation (20 min)
+3. GroupBy and aggregation
 4. Intro to joining and merging: **concepts and syntax**
 5. Hands-on with NYC Taxi dataset. 
 6. Download the files from [here](week4/file_list.md)
