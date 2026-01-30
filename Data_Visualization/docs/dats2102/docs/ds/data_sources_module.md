@@ -22,13 +22,13 @@ This module provides a consolidated list of recommended data sources from Weeks 
 
 ---
 
-<!-- ## Week 4 – Data Wrangling and Joins
+## Week 4 – Data Wrangling and Joins
 - **[TidyTuesday Datasets](https://github.com/rfordatascience/tidytuesday):** Weekly datasets for data wrangling and visualization practice.
 - **[U.S. Census Data](https://data.census.gov/):** Demographic, housing, and economic data from the U.S. Census Bureau.
 
 ---
 
-## Additional References
+<!-- ## Additional References
 - **[ColorBrewer 2.0](https://colorbrewer2.org/):** Color palette selection tool, including colorblind-friendly options.
 - **[Real Python: ggplot in Python](https://realpython.com/ggplot-python/):** Tutorial on the grammar of graphics approach in Python.
 

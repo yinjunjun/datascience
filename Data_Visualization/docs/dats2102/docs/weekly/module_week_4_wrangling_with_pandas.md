@@ -47,20 +47,21 @@ pip install pandas matplotlib seaborn
 
 ### Session 1 (75 min — Theory Focus)
 
-1. Introduction to pandas DataFrames & Series (15 min)
-2. Selection and filtering operations (20 min)
+1. Introduction to pandas DataFrames & Series
+2. Selection and filtering operations
 3. GroupBy and aggregation (20 min)
-4. Intro to joining and merging: **concepts and syntax** (15 min)
-5. Hands-on with NYC Taxi dataset (20 min). Download the files from [here](week4/file_list.md)
+4. Intro to joining and merging: **concepts and syntax**
+5. Hands-on with NYC Taxi dataset. 
+6. Download the files from [here](week4/file_list.md)
 
 
 
 ### Session 2 (75 min - Hands-On)
 
-1. Recap & troubleshooting (10 min)
-2. Reshaping data: pivot, melt, stack/unstack (25 min)
-3. Working with datetime and categorical variables (20 min)
-4. Merging and joining multiple datasets (20 min)
+1. Recap & troubleshooting
+2. Reshaping data: pivot, melt, stack/unstack
+3. Working with datetime and categorical variables
+4. Merging and joining multiple datasets
 5. Download the [Jupyter Notebook](week4/week4_session2_hands_on_student.ipynb) and the [additional population table](week4/nyc_population_2024.csv) for the session.
 6. Download the [complete Jupyter Notebook](week4/week4_session2_hands_on.ipynb). Remember to have other files ready for the notebook.
 
@@ -104,14 +105,14 @@ trips['pickup_datetime'] = pd.to_datetime(trips['pickup_datetime'])
 
 ---
 
-## 🏠 Homework (Due next Thursday, Sept 25)
+## 🏠 Homework
 
 1. Select a dataset with at least 5 columns.
-2. Perform the following in a notebook:
-   - Clean and filter the dataset.
-   - Apply at least 2 groupby operations with aggregations.
-   - Reshape the dataset at least once (pivot, melt, etc.).
-   - Create 3 visualizations from the cleaned dataset.
+2. Perform the following in a notebook:  
+   a. Clean and filter the dataset.  
+   b. Apply at least 2 groupby operations with aggregations.  
+   c. Reshape the dataset at least once (pivot, melt, etc.).  
+   d. Create 3 visualizations from the cleaned dataset.  
 3. Submit `.ipynb` and `.html`.
 
 **Rubric (10 pts)**
