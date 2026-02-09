@@ -28,8 +28,6 @@ This module provides a consolidated list of recommended data sources from Weeks 
 
 ---
 
-<!-- ## Additional References
+## Additional References
 - **[ColorBrewer 2.0](https://colorbrewer2.org/):** Color palette selection tool, including colorblind-friendly options.
 - **[Real Python: ggplot in Python](https://realpython.com/ggplot-python/):** Tutorial on the grammar of graphics approach in Python.
-
- -->

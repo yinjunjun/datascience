@@ -47,20 +47,20 @@ pip install seaborn matplotlib pandas
 
 ## 🧭 Lecture Outline
 
-### Session 1 (75 min — Theory Focus)
+### Session 1 (Theory Focus)
 
-1. Motivation: Why perception matters in visualization (10 min)
-2. Cleveland–McGill hierarchy of graphical perception (20 min)
-3. Preattentive attributes (color, shape, position, orientation) (20 min)
-4. Gestalt principles and visual grouping (15 min)
-5. Misleading charts and design pitfalls (10 min)
+1. Motivation: Why perception matters in visualization 
+2. Cleveland–McGill hierarchy of graphical perception
+3. Preattentive attributes (color, shape, position, orientation)
+4. Gestalt principles and visual grouping
+5. Misleading charts and design pitfalls
 
-### Session 2 (75 min — Hands-on Focus)
+### Session 2 (Hands-on Focus)
 
-1. Recap & discussion of theory (10 min)
-2. Redesign bad charts into effective versions (30 min)
-3. Guided exercise: compare encodings using simulated data (20 min)
-4. Workshop: students bring prior homework plots and improve them (15 min)
+1. Recap & discussion of theory
+2. Redesign bad charts into effective versions
+3. Guided exercise: compare encodings using simulated data
+4. Workshop: students bring prior homework plots and improve them
 5. Download the [Jupyter Notebook](week5/Week5_Session2_HandsOn_class.ipynb) 
 ---
 
@@ -97,16 +97,16 @@ plt.show()
 
 ---
 
-## 🏠 Homework (Due next Friday, Oct 3)
+## 🏠 Homework
 
-1. Find a poorly designed chart (for example, a truncated y-axis bar chart from a news article, a rainbow-colored heatmap in a research paper, or an infographic with distorted area encodings). 
-2. Recreate the chart faithfully in Python.
-3. Redesign the chart applying perception & design principles.
-4. Write a short reflection (200+ words) describing:
-   - Why the original was misleading or ineffective.
-   - What principles guided your redesign?
-   - How your redesign improves comprehension.
-5. Submit `.ipynb` and `.html`.
+1. Find a poorly designed chart (for example, a truncated y-axis bar chart from a news article, a rainbow-colored heatmap in a research paper, or an infographic with distorted area encodings).
+2. Recreate the chart faithfully in Python.  
+3. Redesign the chart applying perception & design principles.  
+4. Write a short reflection (200+ words) describing:  
+   a. Why the original was misleading or ineffective.  
+   b. What principles guided your redesign?  
+   c. How your redesign improves comprehension.  
+5. Use Quarto to render your notebook and submit the zip file.
 
 **Rubric (10 pts)**
 
