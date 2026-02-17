@@ -49,21 +49,21 @@ First, ensure that the virtual environment is properly created and activated. Th
 
 ## 🧭 Lecture Outline
 
-### Session 1 (75 min — Theory Focus)
+### Session 1 (Theory Focus)
 
-1. When to compare? Framing questions and choosing the right comparison graphic (10 min)
-2. Bars vs. dot plots: perceptual accuracy and overplotting concerns (15 min)
-3. Slope charts for before/after and rank changes (15 min)
-4. Scale, baseline, and normalization (indexing to 100, percent change, per‑capita) (20 min)
-5. Small multiples and faceting; ordering and labeling for clarity (15 min)
+1. When to compare? Framing questions and choosing the right comparison graphic
+2. Bars vs. dot plots: perceptual accuracy and overplotting concerns
+3. Slope charts for before/after and rank changes
+4. Scale, baseline, and normalization (indexing to 100, percent change, per‑capita)
+5. Small multiples and faceting; ordering and labeling for clarity
 6. Download the Jupyter Notebook and data used in lecture from [this webpage](week6/file_list.md)
 
-### Session 2 (75 min — Hands-on Focus)
+### Session 2 (Hands-on Focus)
 
-1. Live coding: grouped bars → dot plot refactor (15 min)
-2. Build a slope chart for a before/after dataset (20 min)
-3. Create a small multiples view with `FacetGrid` (20 min)
-4. Mini‑workshop: add annotations, reorder categories, and test alternative scales (20 min)
+1. Live coding: grouped bars → dot plot refactor
+2. Build a slope chart for a before/after dataset
+3. Create a small multiples view with `FacetGrid`
+4. Mini‑workshop: add annotations, reorder categories, and test alternative scales
 5. Download the [Jupyter Notebook](week6/Week06_HandsOn_Session2.ipynb) for this session.
 
 ---
@@ -155,16 +155,16 @@ plt.title("Indexed Comparison")
 
 ---
 
-## 🏠 Homework (Due next Thursday, Oct 9)
+## 🏠 Homework
 
 1. Select a dataset with at least two groups and either two conditions or multiple time points.
-2. Produce the following:
-   - One **dot plot** (or refactor from grouped bars) with thoughtful ordering and labels.
-   - One **slope chart** showing before/after or the earliest vs. the latest comparison.
-   - One **small‑multiples** chart (faceted) on a shared y‑scale.
-   - At least one **normalized** view (percent change or index to baseline).
-3. Add concise annotations and a brief (200–300 words) discussion of which design best supports your comparison question and why.
-4. Submit `.ipynb` and `.html`.
+2. Produce the following:  
+   a. One **dot plot** (or refactor from grouped bars) with thoughtful ordering and labels.  
+   b. One **slope chart** showing before/after or the earliest vs. the latest comparison.  
+   c. One **small‑multiples** chart (faceted) on a shared y‑scale.  
+   d. At least one **normalized** view (percent change or index to baseline).  
+3. Add concise annotations and a brief (100–200 words) discussion of which design best supports your comparison question and why.
+4. Use Quarto to render your notebook and submit the zip file.
 
 **Rubric (10 pts)**
 
