@@ -27,9 +27,9 @@ This two‑session module builds a solid foundation for geographic data visualiz
 - **Claus Wilke**, *Fundamentals of Data Visualization* (Geospatial) — [clauswilke.com/dataviz/geospatial.html](https://clauswilke.com/dataviz/geospatial.html)
 - **ColorBrewer 2.0** — [colorbrewer2.org](https://colorbrewer2.org/)
 - **EPSG.io** (CRS search) — [epsg.io](https://epsg.io/)
-- **Census/ACS** data portal — [data.census.gov](https://data.census.gov/) ; **Social Explorer** — [socialexplorer.com/home](https://www.socialexplorer.com/home)
+- **Census/ACS** data portal — [data.census.gov](https://data.census.gov/)
+- **Social Explorer** — [socialexplorer.com/home](https://www.socialexplorer.com/home)
 - **TopoJSON** docs — [github.com/topojson/topojson](https://github.com/topojson/topojson)
-
 
 
 ---
@@ -49,7 +49,7 @@ Notes:
 
 ---
 
-## 🧭 Session 1 — Mapping I: Foundations & Choropleths (≈75 min)
+## 🧭 Session 1 — Mapping I: Foundations & Choropleths
 
 ### 1) Why map? When *not* to map
 
@@ -78,21 +78,21 @@ Notes:
 - Color: sequential for ordered magnitudes; diverging for centered (±mean); avoid rainbow; accessible palettes.
 - Legends & captions: variable name + units, bin method, CRS, data period, source.
 
-### 6) Demos (brief)
+### 6) Demos
 
 - **GeoPandas + Matplotlib**: static choropleth; export PNG/SVG.
 - **Plotly Express**: interactive choropleth with hover; export HTML.
 - **Folium**: tile basemap, tooltips/popups, layer control; export HTML.
 - **Download** the [Jupyter Notebook and Data](week8/week8.zip)
 
-### 7) Mini‑exercise (10–15 min)
+### 7) Mini‑exercise
 
 - Given polygons + counts + population: make **two** choropleths (quantiles vs equal‑interval).
 - Add a 3‑sentence note comparing how binning changes the story.
 
 ---
 
-## 🧭 Session 2 — Mapping II: Spatial Joins, Enrichment & Interactivity (≈75 min)
+## 🧭 Session 2 — Mapping II: Spatial Joins, Enrichment & Interactivity
 
 ### 1) Spatial joins
 
@@ -136,7 +136,7 @@ Notes:
 
 ---
 
-## 💻 Starter Code (snippets)
+## 💻 Starter Notebook Snippets
 
 ```python
 # GeoPandas read + quick plot
@@ -178,22 +178,22 @@ result = polys.join(counts).fillna({'count':0})
 
 ---
 
-## 🧪 In‑Class Activities (both sessions)
+## 🧪 In‑Class Activities
 
-- Work in pairs. Use provided notebook or your own dataset.
+- Use provided notebook or your own dataset.
 - Maintain a caption block for each map (CRS, data period, binning, source, denominator).
 
 ---
 
-## 🏠 Homework (Due next Tuesday, Oct 28)
+## 🏠 Homework
 
 1. Pick a geographic unit (country/state/county/tract) + a topic.
 2. Build a **reproducible pipeline** (notebook) that includes:
-   - One **static choropleth** with clear legend + caption.
-   - One **interactive map** (Folium or Plotly) with at least two layers (e.g., choropleth + points) and tooltips.
-   - At least **one join** (spatial or attribute) and appropriate normalization.
-   - A **150–250 word** reflection on design choices, denominators, classification, CRS, and limitations.
-3. Submit `.ipynb` and `.html`.
+    - One **static choropleth** with clear legend + caption.
+    - One **interactive map** (Folium or Plotly) with at least two layers (e.g., choropleth + points) and tooltips.
+    - At least **one join** (spatial or attribute) and appropriate normalization.
+    - A **150–250 word** reflection on design choices, denominators, classification, CRS, and limitations.
+3. Use Quarto to render your notebook and submit the zip file.
 
 **Rubric (10 pts)**
 
@@ -209,7 +209,5 @@ result = polys.join(counts).fillna({'count':0})
 Before submitting, make sure:
 
 - Your assignment has fulfilled all the basic requirements listed above.
-
+- The visualizations and your reflections in the Jupyter notebook are properly organized and displayed.
 - Use Quarto to render the notebook into HTML and zip the files for submission.
-
-- Double-check the visualizations and your reflections in the HTML are properly organized and displayed.

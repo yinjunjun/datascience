@@ -118,14 +118,14 @@ df.style.set_table_styles([
 
 ---
 
-## 🏠 Homework (Due Oct 19)
+## 🏠 Homework
 
 1. Select a dataset (sports, election, or financial) and create:
-   - One visualization with clear **title, labels, and at least two annotations**.
-   - One **directly-labeled chart** (instead of legend-based).
-   - One **formatted table** that complements your visualization.
+    - One visualization with clear **title, labels, and at least two annotations**.
+    - One **directly-labeled chart** (instead of legend-based).
+    - One **formatted table** that complements your visualization.
 2. Include a short reflection (200–300 words) explaining your labeling and table design choices.
-3. Submit `.ipynb` and `.html`.
+3. Use Quarto to render your notebook and submit the zip file.
 
 **Rubric (10 pts)**
 
