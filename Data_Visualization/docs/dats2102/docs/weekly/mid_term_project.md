@@ -59,7 +59,7 @@ Select a **real-world dataset** (from provided sources or external datasets of i
 
 ## 🗓️ Timeline
 
-- **Final Submission (Deadline: October 26):** Completed notebook, HTML export, and reflection.
+- **Final Submission (Deadline: March 22)** 
 
 ---
 
