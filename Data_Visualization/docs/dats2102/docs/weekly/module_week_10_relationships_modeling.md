@@ -134,16 +134,16 @@ plt.show()
 
 ---
 
-## 🏠 Homework (Due next Thursday, Nov 6)
+## 🏠 Homework
 
 1. Select a dataset of your choice (or continue from a previous week).
 2. Produce the following:
-   - One **scatterplot** with regression fit and confidence interval.
-   - One **correlation matrix heatmap**.
-   - One **residual plot** illustrating model fit or deviation.
+      - One **scatterplot** with regression fit and confidence interval.
+      - One **correlation matrix heatmap**.
+      - One **residual plot** illustrating model fit or deviation.
 3. Include a brief interpretation (200–300 words) explaining:
-   - What relationships you observed.
-   - How visualization helped confirm or question your assumptions.
+      - What relationships you observed.
+      - How visualization helped confirm or question your assumptions.
 4. Submit `.ipynb` and `.html`.
 
 **Rubric (10 pts)**

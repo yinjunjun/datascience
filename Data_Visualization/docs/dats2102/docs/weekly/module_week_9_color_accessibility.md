@@ -123,13 +123,13 @@ plt.show()
 
 ---
 
-## 🏠 Homework (Due next Monday, Nov 3)
+## 🏠 Homework
 
 1. Choose one of your visualizations from a previous week and redesign it to improve color and accessibility.
 2. Include:
-   - One **before-and-after comparison** of color schemes.
-   - Discussion (150–250 words) of how your new design improves clarity and inclusivity.
-   - Verification of color accessibility (using simulator or contrast tool).
+      - One **before-and-after comparison** of color schemes.
+      - Discussion (150–250 words) of how your new design improves clarity and inclusivity.
+      - Verification of color accessibility (using simulator or contrast tool).
 3. Submit `.ipynb` and `.html`.
 
 **Rubric (10 pts)**

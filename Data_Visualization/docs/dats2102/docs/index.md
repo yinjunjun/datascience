@@ -11,9 +11,9 @@ Welcome to Data Visualiztion for Data Science (DATS 2102)
 * `Mid-term` - [Mid-term Project](weekly/mid_term_project.md)
 * `Week 7` - [Text, Labels, and Tables](weekly/module_week_7_text_labels_tables.md)
 * `Week 8` - [Mapping I & II](weekly/module_week_8_mapping_i_ii.md)
-<!--* `Week 9` - [Color & Accessibility](weekly/module_week_9_color_accessibility.md)
+* `Week 9` - [Color & Accessibility](weekly/module_week_9_color_accessibility.md)
 * `Week 10` - [Relationships & Modeling](weekly/module_week_10_relationships_modeling.md)
-* `Week 11` - [Uncertainty & Error Visualization](weekly/module_week_11_uncertainty_error_visualization.md)
+<!--* `Week 11` - [Uncertainty & Error Visualization](weekly/module_week_11_uncertainty_error_visualization.md)
 * `Week 12` - [Visualization for ML/NLP](weekly/module_week_12_viz_ml_nlp.md)
 * `Finals` - [Final Project](weekly/final_project_module_page.md) -->
 
