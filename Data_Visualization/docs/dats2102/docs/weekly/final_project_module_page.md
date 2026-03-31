@@ -36,7 +36,7 @@ By the end, you will be able to:
 
 1. **Jupyter Notebook(s)** with narrative markdown and all figures.
 
-2. **Quarto rendered HTML(s) of the notebook(s).**
+2. **Quarto rendered HTML(s) of the notebook(s)**.
 
 3. **A data folder or data access instructions** (URLs, retrieval scripts). If restricted, include a synthetic sample and schema.
 
@@ -44,15 +44,15 @@ By the end, you will be able to:
 
 5. **Slide deck (7–8 minutes worth of slides, note that it is not the presentation time)** for your presentation (PDF or PPTX).
 
-6. A recorded short **video/audio (1 to 3 minutes)** for demonstrating your work (e.g., using Zoom).
+6. A recorded short **video/audio (1 to 3 minutes)** for demonstrating your work (e.g., using Zoom).
 
-7. **Optional:** publish your work via GitHub Pages or Quarto Pub and include the URL in the submission. 
+7. **Optional:** publish your work via GitHub Pages or Quarto Pub and include the URL in the submission.
 
 ---
 
 ## 🗓️ Milestones & Timeline
 
-- **Finals Week:** In‑class presentation + final submission of all artifacts.
+- **Finals Week:** In‑class questions/suggestions + final submission of all artifacts.
 
 ---
 
@@ -132,6 +132,6 @@ Before submitting on Blackboard, ensure:
 - Keep code cells small and well‑commented; use functions where helpful.
 
 ---
-## 🏠 Submission Deadline (Monday, December 15, 2025. Firm Deadline)
+## 🏠 Submission Deadline (TBD)
 
 

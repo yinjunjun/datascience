@@ -121,13 +121,13 @@ plt.show()
 
 ---
 
-## 🏠 Homework (Due next Thursday, Nov 13)
+## 🏠 Homework
 
 1. Select a dataset of your choice (or use one from a prior week).
 2. Produce:
-   - One **bar or line chart** with error bars or confidence bands.
-   - One **bootstrap visualization** or sampling distribution.
-   - A short (200–300 words) reflection on how uncertainty affects the interpretation of your results.
+      - One **bar or line chart** with error bars or confidence bands.
+      - One **bootstrap visualization** or sampling distribution.
+      - A short (200–300 words) reflection on how uncertainty affects the interpretation of your results.
 3. Submit `.ipynb` and `.html`.
 
 **Rubric (10 pts)**

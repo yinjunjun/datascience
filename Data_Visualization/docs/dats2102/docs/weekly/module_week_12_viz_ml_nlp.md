@@ -149,16 +149,15 @@ model.visualize_topics()
 
 ---
 
-## 🏠 Homework (Due Monday, December 1st)
+## 🏠 Homework
 
 1. Choose either a structured dataset (classification/regression) **or** an NLP text dataset from Hugging Face (ag = load_dataset("ag_news")).
-2. 
-3. Produce:
-   - One **feature importance** plot.
-   - One **model evaluation visualization** (confusion matrix or ROC curve).
-   - One **text visualization** (word cloud, BERTopic topic cluster, or BERTopic Topic Word Scores).
-4. Include a 200–300 word reflection on how visualization supports model interpretability.
-5. Submit `.ipynb` and `.html`.
+2. Produce:
+      - One **feature importance** plot.
+      - One **model evaluation visualization** (confusion matrix or ROC curve).
+      - One **text visualization** (word cloud, BERTopic topic cluster, or BERTopic Topic Word Scores).
+3. Include a 200–300 word reflection on how visualization supports model interpretability.
+4. Submit `.ipynb` and `.html`.
 
 ---
 

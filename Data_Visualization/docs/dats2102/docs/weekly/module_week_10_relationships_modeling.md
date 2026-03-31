@@ -136,7 +136,7 @@ plt.show()
 
 ## 🏠 Homework
 
-1. Select a dataset of your choice (or continue from a previous week).
+1. Select a dataset of your choice (Try to avoid using integrated dataset).
 2. Produce the following:
       - One **scatterplot** with regression fit and confidence interval.
       - One **correlation matrix heatmap**.
