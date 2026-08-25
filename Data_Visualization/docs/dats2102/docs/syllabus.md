@@ -2,10 +2,10 @@
 
 **Instructor**: Junjun Yin  
 **Email**: [j.yin@gwu.edu](mailto:j.yin@gwu.edu)  
-**Semester**: Spring 2026  
-**Dates**: 01/13/26 – 04/27/26  
+**Semester**: Fall 2026  
+**Dates**: 08/24/26 – 12/08/26  
 **Class Time**: Tuesday & Thursday  
-**Location**: 212 Elliott School of International Affairs, 1957 E Street NW  
+**Location**: 307 Tompkins Hall, 725 23rd Street NW  
 **Office Hours**: (Details in Blackboard)  
 **Office Location**: 2036 H St NW, Room 309
 
@@ -88,7 +88,7 @@ This is a 3-credit course. Students are expected to engage in 2.5 hours of direc
 The final project will synthesize the skills learned throughout the course. Students will:
 - Propose a project idea by Week 9.
 - Develop a prototype by Week 13.
-- Submit the final project by April 30.
+- Submit the final project by December 15.
 
 Requirements:
 - Multiple well-designed visualizations with an accompanying narrative.
