@@ -53,12 +53,11 @@ As data science projects grow in size and complexity, the ability to craft clear
 - [UCI Machine Learning Repository](https://archive.ics.uci.edu/)
 - [data.gov](https://www.data.gov/)
 - [GeoPandas Sample Datasets](https://geopandas.org/en/stable/getting_started/introduction.html#sample-data)
-- [Social Explorer](https://www.socialexplorer.com/) 
+- [Social Explorer](https://www.socialexplorer.com/)
 
 ---
 
 ## 🛠️ Setup Checklist
-
 1. **Install** Anaconda or Miniconda.
 2. **Create/activate** environment using terminal:  
    `conda create -n dataviz python=3.12 -y`  
@@ -68,6 +67,8 @@ As data science projects grow in size and complexity, the ability to craft clear
 4. **Launch JupyterLab**:  
    `jupyter lab`  
 5. (Optional) IDEs you can use: VS Code (or Google Antigravity, Positron), PyCharm, Sublime Text; or run in Google Colab.
+6. [Video tutorial on Youtube](https://www.youtube.com/watch?v=znP1cSxs4S4)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/znP1cSxs4S4?si=ixcnzhA1jra_PtSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 **Troubleshooting**
 
