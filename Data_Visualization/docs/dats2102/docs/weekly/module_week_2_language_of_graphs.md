@@ -131,9 +131,9 @@ alt.Chart(tips).mark_point().encode(
   2. Encode continent as color and year as an animation frame.
 - Discuss:&#x20;
 
-  What does each encoding reveal?&#x20;
+  What does each encoding reveal?
 
-  Which encoding is most effective at showing inequality?&#x20;
+  Which encoding is most effective at showing inequality?
 
   How does animation enhance or hinder interpretation?
 
@@ -160,7 +160,7 @@ px.scatter(
    a. A brief description of what the chart shows.  
    b. Why did you choose those encodings, and how did they help interpretation?  
    c. One limitation or challenge in readability.  
-4. Submit `.ipynb` and `.html`  to Blackboard (You can zip the files together).
+4. Submit a **Zip** file containing the `.ipynb`, `.html` and the `quarto-rendered folder` to Blackboard.
 
 **Rubric (10 pts)**
 

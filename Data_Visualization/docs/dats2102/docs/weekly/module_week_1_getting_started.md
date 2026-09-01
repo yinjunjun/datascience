@@ -101,7 +101,8 @@ As data science projects grow in size and complexity, the ability to craft clear
 
 ## 💻 Starter Notebook Snippets
 
-### Load a tiny dataset ([download the tab-separated file (tsv) version](week1/cities.tsv))
+### Load a tiny dataset 
+[download the tab-separated file (tsv) version](week1/cities.tsv)
 
 ```python
 import pandas as pd
@@ -163,11 +164,13 @@ ax.set(title="Penguins: Flipper vs Body Mass", xlabel="Flipper length (mm)", yla
 
 1. Set up your environment and confirm you can open/run notebooks.
 2. Import a **CSV of your choice** and submit one notebook that includes:
-   - A short markdown description of the dataset (source, what, who, when).
-   - Top 5 rows, `.info()`, and `.describe()`.
-   - One **bar** or **histogram** plot, and one **scatter** plot.
-   - A brief paragraph reflecting on one insight + one limitation of the data.
-3. Render notebook to HTML (`quarto preview <filename>.ipynb`) and upload zip file of `.ipynb`, `.html` and `_files` folder to Blackboard.
+      - A short markdown description of the dataset (source, what, who, when).
+      - Top 5 rows, `.info()`, and `.describe()`.
+      - One **bar** or **histogram** plot, and one **scatter** plot.
+      - A brief paragraph reflecting on one insight + one limitation of the data.
+3. Submission:
+      - Render notebook to HTML (`quarto preview <filename>.ipynb`)
+      - Upload a Zip file with `.ipynb`, `.html` and `_files` folder to Blackboard.
 
 **Rubric (10 pts)**
 
