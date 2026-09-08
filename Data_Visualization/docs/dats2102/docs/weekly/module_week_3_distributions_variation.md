@@ -114,7 +114,7 @@ plt.ylabel('ECDF')
 
 ## 🏠 Homework
 
-1. Select **one dataset** (one from the Sample Data Sources or one of your choice).
+1. Select **one dataset** (Try to avoid using the Sample Data sources, choose an external one).
 2. For the dataset:  
    a. Produce at least 3 distribution plots (histogram, KDE, ECDF, box/violin).  
    b. Interpret shape, spread, skew, and outliers in markdown.  
