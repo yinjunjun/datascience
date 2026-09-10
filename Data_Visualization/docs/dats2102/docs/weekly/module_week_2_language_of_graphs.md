@@ -61,15 +61,13 @@ First make sure the virtual environment is properly created and activated. Then 
 4. Class discussion: When encodings clarify vs. when they clutter (20 min)
 
 ### Session 2 (75 min — Hands-on Focus)
+You can refer to the [Web page](week2/Week2_interactive_session.html) and download the [Jupyter Notebook](week2/Week2_interactive_session.ipynb) for the hands-on session
 
 1. Seaborn’s approach to categorical vs. continuous data with live coding (20 min)
 2. Altair grammar of graphics in Python with interactive demos (25 min)
 3. Guided exercise: create multiple encodings in one chart, reflect on readability (20 min)
 4. Workshop and Q&A: applying tidy reshaping and encodings to provided datasets (10 min)
 
----
-### Week 2 material download
-You can refer to the [Web page](week2/Week2_interactive_session.html) and download the [Jupyter Notebook](week2/Week2_interactive_session.ipynb)
 
 ---
 ## 💻 Notebook Snippets

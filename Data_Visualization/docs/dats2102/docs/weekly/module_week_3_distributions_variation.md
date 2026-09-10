@@ -60,14 +60,12 @@ Check that you can load the iris dataset and render a histogram before class.
 4. Hands-on with iris dataset: plot histograms and KDEs for sepal/petal features (20 min)
 
 ### Session 2 (75 min)
+You can download the [Jupyter Notebook](week3/week3_hands_on_template.ipynb) for the hands-on session. 
 
 1. Recap & troubleshooting from Session 1 (10 min)
 2. Boxplots & violin plots: comparing categories and visualizing spread (25 min)
 3. ECDF: cumulative view of distributions, why it’s useful (20 min)
 4. Workshop: students choose dataset, produce 2–3 distribution plots, peer feedback (20 min)
-
----
-### You can refer to the [Jupyter Notebook template](week3/week3_hands_on_template.ipynb)
 
 ---
 
