@@ -59,7 +59,7 @@ Select a **real-world dataset** (from provided sources or external datasets of i
 
 ## 🗓️ Timeline
 
-- **Final Submission (Deadline: March 22)** 
+- **Final Submission (Deadline: October 22)** 
 
 ---
 
