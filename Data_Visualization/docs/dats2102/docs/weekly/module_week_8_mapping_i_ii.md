@@ -30,7 +30,8 @@ This two‑session module builds a solid foundation for geographic data visualiz
 - **Census/ACS** data portal — [data.census.gov](https://data.census.gov/)
 - **Social Explorer** — [socialexplorer.com/home](https://www.socialexplorer.com/home)
 - **TopoJSON** docs — [github.com/topojson/topojson](https://github.com/topojson/topojson)
-
+- **GeoJSON data for the United States** — [eric.clst.org/tech/usgeojson/](https://eric.clst.org/tech/usgeojson/)
+- **Online GeoJSON editor** — [geojson.io](https://geojson.io/)
 
 ---
 
