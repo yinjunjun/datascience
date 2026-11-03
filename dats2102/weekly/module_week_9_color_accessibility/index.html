@@ -154,10 +154,16 @@
 </ul>
 <hr />
 <h2 id="setup-checklist">🛠️ Setup Checklist</h2>
-<p>Ensure your environment includes:</p>
-<pre><code class="language-bash">pip install seaborn matplotlib colorcet pandas
+<p>Ensure your environment includes everything the notebook imports:</p>
+<pre><code class="language-bash">pip install numpy pandas matplotlib seaborn colorcet plotly altair vega_datasets geopandas mapclassify
 </code></pre>
-<p>Confirm you can load sample datasets and apply color palettes using Seaborn and Matplotlib.</p>
+<p><strong>Don't skip <code>mapclassify</code>.</strong> The notebook never imports it by name, but GeoPandas
+needs it the moment you pass <code>scheme="Quantiles"</code> or <code>scheme="FisherJenks"</code> to
+<code>.plot()</code>. Without it those calls fail with an error that does not mention the
+missing package.</p>
+<p>Confirm you can load the sample datasets (<code>seaborn</code>, <code>vega_datasets</code>, <code>plotly.express</code>
+all download theirs on first use, so you need a network connection) and that
+<code>data/map_us_only.geojson</code> and <code>data/unemployment.csv</code> sit next to the notebook.</p>
 <hr />
 <h2 id="lecture-outline">🧭 Lecture Outline</h2>
 <h3 id="session-1-theory-hands-on">Session 1 (Theory + Hands-on)</h3>
@@ -168,45 +174,104 @@
 <li>Color perception &amp; accessibility — common pitfalls</li>
 <li>Experiment with Seaborn and Matplotlib color palettes</li>
 <li>Apply ColorBrewer and Colorcet palettes to the previous week’s map visualizations</li>
+<li>Classification and class breaks — quantile vs equal-interval vs Fisher-Jenks</li>
 <li><strong>Download</strong> the <a href="../week9/week9.zip">Jupyter Notebook and Data</a></li>
 </ol>
 <hr />
 <h2 id="starter-notebook-snippets">💻 Starter Notebook Snippets</h2>
-<h3 id="using-seaborn-palettes">Using Seaborn palettes</h3>
-<pre><code class="language-python">import seaborn as sns
+<p>These are taken from the course notebook (<code>Week09_Color_Accessibility_Demos.ipynb</code>
+in the download above), so you can follow along or run them on your own data.</p>
+<h3 id="1-match-the-palette-to-the-data-type">1. Match the palette to the data type</h3>
+<pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt
 
-# Sequential palette
-sns.palplot(sns.color_palette(&quot;Blues&quot;, 8))
-plt.title(&quot;Sequential palette example&quot;)
+# Sequential: one direction, low to high
+data_seq = np.outer(np.linspace(0, 1, 120), np.ones(120))
+plt.imshow(data_seq, aspect=&quot;auto&quot;, cmap=&quot;viridis&quot;)
+plt.title(&quot;Sequential colormap: viridis (ordered data)&quot;)
+plt.colorbar()
+plt.show()
 
-# Diverging palette
-sns.palplot(sns.diverging_palette(220, 20, n=8))
-plt.title(&quot;Diverging palette example&quot;)
-
-# Categorical palette
-sns.palplot(sns.color_palette(&quot;Set2&quot;, 8))
-plt.title(&quot;Categorical palette example&quot;)
+# Diverging: a meaningful midpoint at 0
+data_div = np.outer(np.linspace(-1, 1, 120), np.ones(120))
+plt.imshow(data_div, aspect=&quot;auto&quot;, cmap=&quot;coolwarm&quot;)
+plt.title(&quot;Diverging colormap: coolwarm (deviation around 0)&quot;)
+plt.colorbar()
 plt.show()
 </code></pre>
-<h3 id="applying-color-palettes-to-a-chart">Applying color palettes to a chart</h3>
-<pre><code class="language-python">penguins = sns.load_dataset(&quot;penguins&quot;).dropna()
-sns.scatterplot(data=penguins, x=&quot;flipper_length_mm&quot;, y=&quot;body_mass_g&quot;, hue=&quot;species&quot;, palette=&quot;Set2&quot;)
-plt.title(&quot;Categorical color palette example&quot;)
-plt.show()
-</code></pre>
-<h3 id="testing-color-palettes-for-accessibility">Testing color palettes for accessibility</h3>
-<pre><code class="language-python"># Example: simulate grayscale or color blindness
-import matplotlib.colors as mcolors
-import numpy as np
+<h3 id="2-check-text-contrast-against-wcag">2. Check text contrast against WCAG</h3>
+<pre><code class="language-python">def srgb_to_linear(c):
+    &quot;&quot;&quot;One sRGB channel (0-255) -&gt; linear light (0-1).
 
-# Convert to grayscale to check luminance contrast
-img = np.linspace(0, 1, 256).reshape(1, -1)
-plt.imshow(img, cmap=&quot;viridis&quot;, aspect=&quot;auto&quot;)
-plt.title(&quot;Luminance contrast check (Viridis)&quot;)
-plt.axis('off')
-plt.show()
+    WCAG defines luminance on linear light, so the gamma has to come off first.
+    &quot;&quot;&quot;
+    c = c / 255.0
+    return c / 12.92 if c &lt;= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def rel_luminance(rgb):
+    r, g, b = (srgb_to_linear(v) for v in rgb)
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def contrast_ratio(fg, bg):
+    L1, L2 = rel_luminance(fg), rel_luminance(bg)
+    hi, lo = max(L1, L2), min(L1, L2)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+contrast_ratio((33, 33, 33), (255, 255, 255))     # 16.10 -&gt; passes
+contrast_ratio((150, 150, 150), (255, 255, 255))  #  2.96 -&gt; fails (needs 4.5)
 </code></pre>
+<h3 id="3-simulate-color-vision-deficiency">3. Simulate color vision deficiency</h3>
+<pre><code class="language-python">import numpy as np
+
+def srgb_to_linear_arr(c):
+    return np.where(c &lt;= 0.04045, c / 12.92, ((c + 0.055) / 1.055) ** 2.4)
+
+
+def linear_to_srgb_arr(c):
+    c = np.clip(c, 0, 1)
+    return np.where(c &lt;= 0.0031308, c * 12.92, 1.055 * c ** (1 / 2.4) - 0.055)
+
+
+# Vienot, Brettel &amp; Mollon (1999). The matrix is only valid in LINEAR light,
+# so undo the sRGB gamma first -- skipping that step overstates the damage and
+# can make a safe palette look as bad as a risky one.
+DEUTERANOPIA = np.array([[ 0.2920, 0.7054, -0.0003],
+                         [ 0.2934, 0.7089,  0.0000],
+                         [-0.0209, 0.0272,  0.9922]])
+
+
+def simulate_cvd(rgb, M):
+    &quot;&quot;&quot;rgb: array of floats 0-1, shape (..., 3).&quot;&quot;&quot;
+    lin = srgb_to_linear_arr(np.asarray(rgb, float))
+    out = np.clip(lin.reshape(-1, 3) @ M.T, 0, 1).reshape(np.shape(rgb))
+    return np.clip(linear_to_srgb_arr(out), 0, 1)
+</code></pre>
+<p>Run it on a red/green pair and a blue/orange pair and compare how far apart the
+two colors stay. Red and green collapse into two olives; blue and orange do not.</p>
+<h3 id="4-class-breaks-change-the-map">4. Class breaks change the map</h3>
+<pre><code class="language-python">import pandas as pd
+import geopandas as gpd
+
+polys = gpd.read_file(&quot;data/map_us_only.geojson&quot;)
+attrs = pd.read_csv(&quot;data/unemployment.csv&quot;)
+g = pd.merge(polys, attrs, left_on=&quot;GEO_ID&quot;, right_on=&quot;Geo_GEO_ID&quot;, how=&quot;left&quot;)
+g = g.to_crs(&quot;ESRI:102003&quot;)          # equal-area projection
+
+# Social Explorer table A17002. The unemployment rate is
+# unemployed / civilian labor force -- NOT a share of total population.
+g[&quot;unemp_rate&quot;] = g[&quot;SE_A17002_006&quot;] / g[&quot;SE_A17002_004&quot;] * 100
+
+for scheme in (&quot;EqualInterval&quot;, &quot;Quantiles&quot;, &quot;FisherJenks&quot;):
+    ax = g.plot(column=&quot;unemp_rate&quot;, cmap=&quot;OrRd&quot;, scheme=scheme, k=5,
+                legend=True, edgecolor=&quot;white&quot;, linewidth=0.2)
+    ax.set_title(scheme)
+    ax.set_axis_off()
+</code></pre>
+<p>Same data, same palette, three different maps. Say in your caption which
+classification you used and why.</p>
 <hr />
 <h2 id="in-class-activity">🧪 In-Class Activity</h2>
 <ul>

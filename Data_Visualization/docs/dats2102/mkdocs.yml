@@ -1,4 +1,7 @@
 site_name: DATS 2102
+# Build straight into the published folder at the repo root,
+# so `mkdocs build` needs no copy step afterwards.
+site_dir: ../../../dats2102
 nav:
   - Home: index.md
   - Syllabus: syllabus.md

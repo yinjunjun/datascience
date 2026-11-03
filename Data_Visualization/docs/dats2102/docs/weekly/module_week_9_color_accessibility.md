@@ -42,13 +42,20 @@ We will discuss the use of color in sequential, diverging, and categorical scale
 
 ## 🛠️ Setup Checklist
 
-Ensure your environment includes:
+Ensure your environment includes everything the notebook imports:
 
 ```bash
-pip install seaborn matplotlib colorcet pandas
+pip install numpy pandas matplotlib seaborn colorcet plotly altair vega_datasets geopandas mapclassify
 ```
 
-Confirm you can load sample datasets and apply color palettes using Seaborn and Matplotlib.
+**Don't skip `mapclassify`.** The notebook never imports it by name, but GeoPandas
+needs it the moment you pass `scheme="Quantiles"` or `scheme="FisherJenks"` to
+`.plot()`. Without it those calls fail with an error that does not mention the
+missing package.
+
+Confirm you can load the sample datasets (`seaborn`, `vega_datasets`, `plotly.express`
+all download theirs on first use, so you need a network connection) and that
+`data/map_us_only.geojson` and `data/unemployment.csv` sit next to the notebook.
 
 ---
 
@@ -62,55 +69,120 @@ Confirm you can load sample datasets and apply color palettes using Seaborn and 
 4. Color perception & accessibility — common pitfalls
 5. Experiment with Seaborn and Matplotlib color palettes
 6. Apply ColorBrewer and Colorcet palettes to the previous week’s map visualizations
-4. **Download** the [Jupyter Notebook and Data](week9/week9.zip)
+7. Classification and class breaks — quantile vs equal-interval vs Fisher-Jenks
+8. **Download** the [Jupyter Notebook and Data](week9/week9.zip)
 
 ---
 
 ## 💻 Starter Notebook Snippets
 
-### Using Seaborn palettes
+These are taken from the course notebook (`Week09_Color_Accessibility_Demos.ipynb`
+in the download above), so you can follow along or run them on your own data.
+
+### 1. Match the palette to the data type
 
 ```python
-import seaborn as sns
+import numpy as np
 import matplotlib.pyplot as plt
 
-# Sequential palette
-sns.palplot(sns.color_palette("Blues", 8))
-plt.title("Sequential palette example")
+# Sequential: one direction, low to high
+data_seq = np.outer(np.linspace(0, 1, 120), np.ones(120))
+plt.imshow(data_seq, aspect="auto", cmap="viridis")
+plt.title("Sequential colormap: viridis (ordered data)")
+plt.colorbar()
+plt.show()
 
-# Diverging palette
-sns.palplot(sns.diverging_palette(220, 20, n=8))
-plt.title("Diverging palette example")
-
-# Categorical palette
-sns.palplot(sns.color_palette("Set2", 8))
-plt.title("Categorical palette example")
+# Diverging: a meaningful midpoint at 0
+data_div = np.outer(np.linspace(-1, 1, 120), np.ones(120))
+plt.imshow(data_div, aspect="auto", cmap="coolwarm")
+plt.title("Diverging colormap: coolwarm (deviation around 0)")
+plt.colorbar()
 plt.show()
 ```
 
-### Applying color palettes to a chart
+### 2. Check text contrast against WCAG
 
 ```python
-penguins = sns.load_dataset("penguins").dropna()
-sns.scatterplot(data=penguins, x="flipper_length_mm", y="body_mass_g", hue="species", palette="Set2")
-plt.title("Categorical color palette example")
-plt.show()
+def srgb_to_linear(c):
+    """One sRGB channel (0-255) -> linear light (0-1).
+
+    WCAG defines luminance on linear light, so the gamma has to come off first.
+    """
+    c = c / 255.0
+    return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+
+
+def rel_luminance(rgb):
+    r, g, b = (srgb_to_linear(v) for v in rgb)
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+
+
+def contrast_ratio(fg, bg):
+    L1, L2 = rel_luminance(fg), rel_luminance(bg)
+    hi, lo = max(L1, L2), min(L1, L2)
+    return (hi + 0.05) / (lo + 0.05)
+
+
+contrast_ratio((33, 33, 33), (255, 255, 255))     # 16.10 -> passes
+contrast_ratio((150, 150, 150), (255, 255, 255))  #  2.96 -> fails (needs 4.5)
 ```
 
-### Testing color palettes for accessibility
+### 3. Simulate color vision deficiency
 
 ```python
-# Example: simulate grayscale or color blindness
-import matplotlib.colors as mcolors
 import numpy as np
 
-# Convert to grayscale to check luminance contrast
-img = np.linspace(0, 1, 256).reshape(1, -1)
-plt.imshow(img, cmap="viridis", aspect="auto")
-plt.title("Luminance contrast check (Viridis)")
-plt.axis('off')
-plt.show()
+def srgb_to_linear_arr(c):
+    return np.where(c <= 0.04045, c / 12.92, ((c + 0.055) / 1.055) ** 2.4)
+
+
+def linear_to_srgb_arr(c):
+    c = np.clip(c, 0, 1)
+    return np.where(c <= 0.0031308, c * 12.92, 1.055 * c ** (1 / 2.4) - 0.055)
+
+
+# Vienot, Brettel & Mollon (1999). The matrix is only valid in LINEAR light,
+# so undo the sRGB gamma first -- skipping that step overstates the damage and
+# can make a safe palette look as bad as a risky one.
+DEUTERANOPIA = np.array([[ 0.2920, 0.7054, -0.0003],
+                         [ 0.2934, 0.7089,  0.0000],
+                         [-0.0209, 0.0272,  0.9922]])
+
+
+def simulate_cvd(rgb, M):
+    """rgb: array of floats 0-1, shape (..., 3)."""
+    lin = srgb_to_linear_arr(np.asarray(rgb, float))
+    out = np.clip(lin.reshape(-1, 3) @ M.T, 0, 1).reshape(np.shape(rgb))
+    return np.clip(linear_to_srgb_arr(out), 0, 1)
 ```
+
+Run it on a red/green pair and a blue/orange pair and compare how far apart the
+two colors stay. Red and green collapse into two olives; blue and orange do not.
+
+### 4. Class breaks change the map
+
+```python
+import pandas as pd
+import geopandas as gpd
+
+polys = gpd.read_file("data/map_us_only.geojson")
+attrs = pd.read_csv("data/unemployment.csv")
+g = pd.merge(polys, attrs, left_on="GEO_ID", right_on="Geo_GEO_ID", how="left")
+g = g.to_crs("ESRI:102003")          # equal-area projection
+
+# Social Explorer table A17002. The unemployment rate is
+# unemployed / civilian labor force -- NOT a share of total population.
+g["unemp_rate"] = g["SE_A17002_006"] / g["SE_A17002_004"] * 100
+
+for scheme in ("EqualInterval", "Quantiles", "FisherJenks"):
+    ax = g.plot(column="unemp_rate", cmap="OrRd", scheme=scheme, k=5,
+                legend=True, edgecolor="white", linewidth=0.2)
+    ax.set_title(scheme)
+    ax.set_axis_off()
+```
+
+Same data, same palette, three different maps. Say in your caption which
+classification you used and why.
 
 ---
 
