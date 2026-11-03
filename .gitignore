@@ -1,6 +1,6 @@
-dats2102/.DS_Store
-dats2102/.DS_Store
-dats2102/weekly/.DS_Store
-Data_Visualization/docs/dats2102/site/weekly/.DS_Store
-Data_Visualization/docs/dats2102/site/.DS_Store
-dats2102/.DS_Store
+# macOS
+.DS_Store
+
+# MkDocs builds straight into dats2102/ now (site_dir in
+# Data_Visualization/docs/dats2102/mkdocs.yml), so there is no local site/ copy.
+Data_Visualization/docs/dats2102/site/
