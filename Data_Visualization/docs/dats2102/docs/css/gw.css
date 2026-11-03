@@ -1,0 +1,92 @@
+/* George Washington University brand colors for the DATS 2102 site.
+   Palette: https://communications.gwu.edu -> Color Palette
+
+   Contrast against white, measured:
+     GW Blue  #033C5A  11.68:1   text at any size
+     Potomac  #0075C8   4.80:1   text at any size (links)
+     GW Buff  #D6BF91   1.79:1   DECORATIVE ONLY - never put text on or in it
+*/
+
+:root {
+  --gw-blue:    #033c5a;
+  --gw-navy:    #00223e;
+  --gw-potomac: #0075c8;
+  --gw-buff:    #d6bf91;
+  --gw-buff-20: #f6f1e8;
+
+  --bs-primary: #033c5a;
+  --bs-primary-rgb: 3, 60, 90;
+  --bs-link-color: #0075c8;
+  --bs-link-hover-color: #033c5a;
+}
+
+/* The stock theme paints .bg-primary with a gradient, so the background-image
+   has to be cleared as well as the colour. */
+.navbar.bg-primary,
+.bg-primary {
+  background-color: var(--gw-blue) !important;
+  background-image: none !important;
+}
+.navbar.fixed-top { border-bottom: 3px solid var(--gw-buff); }
+
+.navbar-dark .navbar-nav .nav-link { color: rgba(255, 255, 255, 0.85); }
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .active > .nav-link { color: #fff; }
+
+a { color: var(--gw-potomac); }
+a:hover,
+a:focus { color: var(--gw-blue); }
+
+h1, h2, h3, h4, h5, h6 { color: var(--gw-blue); }
+h1 {
+  border-bottom: 2px solid var(--gw-buff);
+  padding-bottom: 0.3rem;
+}
+
+/* Sidebar: buff marks hover, solid blue marks the page you are on. */
+.bs-sidebar .nav > li > a { color: var(--gw-blue); }
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+  background-color: var(--gw-buff-20);
+  border-left: 3px solid var(--gw-buff);
+  color: var(--gw-blue);
+}
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+  background-color: var(--gw-buff-20);
+  border-left: 3px solid var(--gw-blue);
+  color: var(--gw-blue);
+  font-weight: 600;
+}
+
+/* The one-line summary at the top of each module page. */
+blockquote {
+  border-left: 4px solid var(--gw-buff);
+  background: var(--gw-buff-20);
+  padding: 0.6rem 0.9rem;
+  color: var(--gw-navy);
+}
+
+table.table thead th {
+  background: var(--gw-blue);
+  color: #fff;
+  border-color: var(--gw-blue);
+}
+
+.btn-primary {
+  background-color: var(--gw-blue);
+  background-image: none;
+  border-color: var(--gw-blue);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--gw-navy);
+  border-color: var(--gw-navy);
+}
+
+footer {
+  border-top: 3px solid var(--gw-buff);
+  color: var(--gw-navy);
+}

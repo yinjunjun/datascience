@@ -6,7 +6,9 @@ nav:
   - Home: index.md
   - Syllabus: syllabus.md
   - Modules: course_modules.md
-theme:  
+theme:
   name: mkdocs
-  palette:
-    primary: green
+
+# GW brand colors layered over the stock theme.
+extra_css:
+  - css/gw.css
