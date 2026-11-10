@@ -42,10 +42,13 @@ Students will learn how to use scatterplots, trend lines, confidence intervals, 
 Ensure your environment includes:
 
 ```bash
-pip install seaborn matplotlib statsmodels pandas numpy
+pip install numpy pandas matplotlib seaborn statsmodels scikit-learn
 ```
 
-Confirm you can run regression visualizations and calculate correlations using Seaborn and Statsmodels.
+**`scikit-learn` is on this list for the datasets, not for modeling.** We use it
+only to fetch Ames and California housing; the regression itself is Statsmodels.
+Both datasets are also cached as CSVs in the week 10 folder, so the notebooks run
+without a network connection.
 
 ---
 
@@ -77,51 +80,110 @@ Confirm you can run regression visualizations and calculate correlations using S
 ### Scatterplot with regression fit
 
 ```python
+import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-penguins = sns.load_dataset("penguins").dropna()
-sns.lmplot(data=penguins, x="flipper_length_mm", y="body_mass_g", hue="species", height=5, aspect=1.2)
-plt.title("Flipper length vs Body mass with regression line")
+df = pd.read_csv("data/ames.csv")
+
+sns.regplot(data=df, x="GrLivArea", y="SalePrice",
+            scatter_kws={"alpha": 0.5}, line_kws={"color": "firebrick"})
+plt.xlabel("Above-grade living area (sq ft)")
+plt.ylabel("Sale price ($)")
+plt.title("Living area vs sale price, Ames IA")
 plt.show()
 ```
+
+### One line per group
+
+```python
+two = df[df["HouseStyle"].isin(["1Story", "2Story"])]
+sns.lmplot(data=two, x="GrLivArea", y="SalePrice", hue="HouseStyle",
+           height=4.5, aspect=1.3, scatter_kws={"alpha": 0.5})
+plt.show()
+```
+
+Two stories of the same square footage sell for **less** than one story of the
+same square footage, and the slopes differ. A single pooled line hides both.
 
 ### Correlation matrix heatmap
 
 ```python
-import pandas as pd
-corr = penguins.select_dtypes('number').corr()
-sns.heatmap(corr, annot=True, cmap='coolwarm', center=0)
-plt.title("Correlation matrix of numeric features")
+num = df[["SalePrice", "GrLivArea", "OverallQual", "TotalBsmtSF",
+          "GarageArea", "LotArea", "YearBuilt"]]
+sns.heatmap(num.corr(numeric_only=True), annot=True, fmt=".2f",
+            cmap="vlag", center=0, square=True)
+plt.title("Correlation matrix")
 plt.show()
 ```
 
-### Residual plot
-
-```python
-sns.residplot(data=penguins, x="flipper_length_mm", y="body_mass_g", lowess=True, color="#4e79a7")
-plt.title("Residual plot: checking nonlinearity")
-plt.show()
-```
+A **diverging** palette centered at zero, because the sign matters — Week 9
+applied. A sequential palette would make -0.4 and +0.4 look like different
+magnitudes.
 
 ### Regression with Statsmodels
 
 ```python
 import statsmodels.api as sm
-X = penguins[["flipper_length_mm"]]
-y = penguins["body_mass_g"]
-X = sm.add_constant(X)
-model = sm.OLS(y, X).fit()
-print(model.summary())
 
-# Add predictions and visualize
-penguins['pred'] = model.predict(X)
-plt.scatter(penguins['flipper_length_mm'], y, label='Observed')
-plt.plot(penguins['flipper_length_mm'], penguins['pred'], color='red', label='Fitted line')
-plt.legend()
-plt.title("OLS Regression Fit")
+X = sm.add_constant(df["GrLivArea"])
+model = sm.OLS(df["SalePrice"], X).fit()
+print(model.summary())
+```
+
+### Residual plot — the most important plot of the week
+
+```python
+sns.residplot(data=df, x="GrLivArea", y="SalePrice", lowess=True,
+              scatter_kws={"alpha": 0.5},
+              line_kws={"color": "firebrick", "lw": 2})
+plt.axhline(0, color="gray", lw=1)
+plt.ylabel("Residual ($)")
+plt.title("Residuals vs the predictor")
 plt.show()
 ```
+
+If a straight line described the data well, this would be a shapeless band
+around zero. It is not: the spread widens with house size and the smoother
+bends. Both are the model telling you something the scatterplot did not.
+
+### When n is large: overplotting
+
+```python
+ca = pd.read_csv("data/california.csv")   # 20,640 block groups
+
+fig, axes = plt.subplots(1, 3, figsize=(14, 4), sharey=True)
+axes[0].scatter(ca["MedInc"], ca["MedHouseVal"], s=12)
+axes[1].scatter(ca["MedInc"], ca["MedHouseVal"], s=6, alpha=0.08, color="steelblue")
+hb = axes[2].hexbin(ca["MedInc"], ca["MedHouseVal"], gridsize=45, cmap="Blues", mincnt=1)
+plt.colorbar(hb, ax=axes[2], label="block groups")
+plt.show()
+```
+
+The plain scatter shows the *extent* of the data and nothing about its
+*density*. Once the overplotting clears, a hard ceiling appears: 965 block
+groups (4.7%) were capped at exactly $500,001.
+
+---
+
+## ⚖️ Where a variable comes from
+
+Before the hands-on, we spend about fifteen minutes on a dataset we are **not**
+using: Boston Housing, the standard regression teaching set for forty years,
+removed from scikit-learn in version 1.2.
+
+Its `black` column does not store the proportion of Black residents per town.
+It stores `1000 * (Bk - 0.63) ** 2` — a squared term asserting that home values
+rise as a town's Black population moves away from 63% in either direction. That
+is a hypothesis somebody built into the data, not a measurement.
+
+We check the formula ourselves, plot what it does, and find that undoing the
+transform **reverses the sign** of the correlation with home value.
+
+**Download** the [ethics case notebook](week10/Week10_ethics_dataset_case.ipynb)
+
+The habit it is meant to build: read the data dictionary before you plot, and
+plot the variable itself — not only its relationship to your outcome.
 
 ---
 
