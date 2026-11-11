@@ -96,6 +96,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#where-a-variable-comes-from" class="nav-link">⚖️ Where a variable comes from</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#in-class-activity" class="nav-link">🧪 In-Class Activity</a>
               <ul class="nav flex-column">
               </ul>
@@ -153,9 +157,12 @@
 <hr />
 <h2 id="setup-checklist">🛠️ Setup Checklist</h2>
 <p>Ensure your environment includes:</p>
-<pre><code class="language-bash">pip install seaborn matplotlib statsmodels pandas numpy
+<pre><code class="language-bash">pip install numpy pandas matplotlib seaborn statsmodels scikit-learn
 </code></pre>
-<p>Confirm you can run regression visualizations and calculate correlations using Seaborn and Statsmodels.</p>
+<p><strong><code>scikit-learn</code> is on this list for the datasets, not for modeling.</strong> We use it
+only to fetch Ames and California housing; the regression itself is Statsmodels.
+Both datasets are also cached as CSVs in the week 10 folder, so the notebooks run
+without a network connection.</p>
 <hr />
 <h2 id="lecture-outline">🧭 Lecture Outline</h2>
 <h3 id="session-1-75-min-theory-focus">Session 1 (75 min — Theory Focus)</h3>
@@ -165,7 +172,8 @@
 <li>Simple regression and confidence intervals (20 min)</li>
 <li>Interpreting model fit and residuals visually (20 min)</li>
 <li>Visual pitfalls: spurious correlation, overfitting, and omitted variables (10 min)</li>
-<li><strong>Download</strong> the <a href="../week10/Week10_relationships_modeling.ipynb">Jupyter Notebook</a></li>
+<li><strong>Download</strong> <a href="../week10/week10.zip">everything for this week as one zip</a> — both notebooks plus the <code>data/</code> folder they read from</li>
+<li>Or the <a href="../week10/Week10_relationships_modeling.ipynb">modeling notebook</a> on its own, with <a href="../week10/data/ames.csv"><code>ames.csv</code></a> and <a href="../week10/data/california.csv"><code>california.csv</code></a> saved into a <code>data/</code> folder beside it</li>
 </ol>
 <h3 id="session-2-75-min-hands-on-focus">Session 2 (75 min — Hands-on Focus)</h3>
 <ol>
@@ -174,48 +182,90 @@
 <li>Building an OLS regression model with Statsmodels (20 min)</li>
 <li>Visualizing residuals and diagnostic plots (15 min)</li>
 <li>Mini‑workshop: interpret one key relationship in your dataset (5 min)</li>
-<li><strong>Download</strong> the <a href="../week10/Week10_relationships_modeling_2.ipynb">Jupyter Notebook</a></li>
+<li>Continue in the same <a href="../week10/Week10_relationships_modeling.ipynb">modeling notebook</a> — it covers both sessions</li>
 <li>A <strong>Working version of linked plotly plot</strong> can be <a href="../week10/linked_plotly_plots.ipynb">downloaded here</a></li>
 </ol>
 <hr />
 <h2 id="starter-notebook-snippets">💻 Starter Notebook Snippets</h2>
 <h3 id="scatterplot-with-regression-fit">Scatterplot with regression fit</h3>
-<pre><code class="language-python">import seaborn as sns
+<pre><code class="language-python">import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 
-penguins = sns.load_dataset(&quot;penguins&quot;).dropna()
-sns.lmplot(data=penguins, x=&quot;flipper_length_mm&quot;, y=&quot;body_mass_g&quot;, hue=&quot;species&quot;, height=5, aspect=1.2)
-plt.title(&quot;Flipper length vs Body mass with regression line&quot;)
+df = pd.read_csv(&quot;data/ames.csv&quot;)
+
+sns.regplot(data=df, x=&quot;GrLivArea&quot;, y=&quot;SalePrice&quot;,
+            scatter_kws={&quot;alpha&quot;: 0.5}, line_kws={&quot;color&quot;: &quot;firebrick&quot;})
+plt.xlabel(&quot;Above-grade living area (sq ft)&quot;)
+plt.ylabel(&quot;Sale price ($)&quot;)
+plt.title(&quot;Living area vs sale price, Ames IA&quot;)
 plt.show()
 </code></pre>
+<h3 id="one-line-per-group">One line per group</h3>
+<pre><code class="language-python">two = df[df[&quot;HouseStyle&quot;].isin([&quot;1Story&quot;, &quot;2Story&quot;])]
+sns.lmplot(data=two, x=&quot;GrLivArea&quot;, y=&quot;SalePrice&quot;, hue=&quot;HouseStyle&quot;,
+           height=4.5, aspect=1.3, scatter_kws={&quot;alpha&quot;: 0.5})
+plt.show()
+</code></pre>
+<p>Two stories of the same square footage sell for <strong>less</strong> than one story of the
+same square footage, and the slopes differ. A single pooled line hides both.</p>
 <h3 id="correlation-matrix-heatmap">Correlation matrix heatmap</h3>
-<pre><code class="language-python">import pandas as pd
-corr = penguins.select_dtypes('number').corr()
-sns.heatmap(corr, annot=True, cmap='coolwarm', center=0)
-plt.title(&quot;Correlation matrix of numeric features&quot;)
+<pre><code class="language-python">num = df[[&quot;SalePrice&quot;, &quot;GrLivArea&quot;, &quot;OverallQual&quot;, &quot;TotalBsmtSF&quot;,
+          &quot;GarageArea&quot;, &quot;LotArea&quot;, &quot;YearBuilt&quot;]]
+sns.heatmap(num.corr(numeric_only=True), annot=True, fmt=&quot;.2f&quot;,
+            cmap=&quot;vlag&quot;, center=0, square=True)
+plt.title(&quot;Correlation matrix&quot;)
 plt.show()
 </code></pre>
-<h3 id="residual-plot">Residual plot</h3>
-<pre><code class="language-python">sns.residplot(data=penguins, x=&quot;flipper_length_mm&quot;, y=&quot;body_mass_g&quot;, lowess=True, color=&quot;#4e79a7&quot;)
-plt.title(&quot;Residual plot: checking nonlinearity&quot;)
-plt.show()
-</code></pre>
+<p>A <strong>diverging</strong> palette centered at zero, because the sign matters — Week 9
+applied. A sequential palette would make -0.4 and +0.4 look like different
+magnitudes.</p>
 <h3 id="regression-with-statsmodels">Regression with Statsmodels</h3>
 <pre><code class="language-python">import statsmodels.api as sm
-X = penguins[[&quot;flipper_length_mm&quot;]]
-y = penguins[&quot;body_mass_g&quot;]
-X = sm.add_constant(X)
-model = sm.OLS(y, X).fit()
-print(model.summary())
 
-# Add predictions and visualize
-penguins['pred'] = model.predict(X)
-plt.scatter(penguins['flipper_length_mm'], y, label='Observed')
-plt.plot(penguins['flipper_length_mm'], penguins['pred'], color='red', label='Fitted line')
-plt.legend()
-plt.title(&quot;OLS Regression Fit&quot;)
+X = sm.add_constant(df[&quot;GrLivArea&quot;])
+model = sm.OLS(df[&quot;SalePrice&quot;], X).fit()
+print(model.summary())
+</code></pre>
+<h3 id="residual-plot-the-most-important-plot-of-the-week">Residual plot — the most important plot of the week</h3>
+<pre><code class="language-python">sns.residplot(data=df, x=&quot;GrLivArea&quot;, y=&quot;SalePrice&quot;, lowess=True,
+              scatter_kws={&quot;alpha&quot;: 0.5},
+              line_kws={&quot;color&quot;: &quot;firebrick&quot;, &quot;lw&quot;: 2})
+plt.axhline(0, color=&quot;gray&quot;, lw=1)
+plt.ylabel(&quot;Residual ($)&quot;)
+plt.title(&quot;Residuals vs the predictor&quot;)
 plt.show()
 </code></pre>
+<p>If a straight line described the data well, this would be a shapeless band
+around zero. It is not: the spread widens with house size and the smoother
+bends. Both are the model telling you something the scatterplot did not.</p>
+<h3 id="when-n-is-large-overplotting">When n is large: overplotting</h3>
+<pre><code class="language-python">ca = pd.read_csv(&quot;data/california.csv&quot;)   # 20,640 block groups
+
+fig, axes = plt.subplots(1, 3, figsize=(14, 4), sharey=True)
+axes[0].scatter(ca[&quot;MedInc&quot;], ca[&quot;MedHouseVal&quot;], s=12)
+axes[1].scatter(ca[&quot;MedInc&quot;], ca[&quot;MedHouseVal&quot;], s=6, alpha=0.08, color=&quot;steelblue&quot;)
+hb = axes[2].hexbin(ca[&quot;MedInc&quot;], ca[&quot;MedHouseVal&quot;], gridsize=45, cmap=&quot;Blues&quot;, mincnt=1)
+plt.colorbar(hb, ax=axes[2], label=&quot;block groups&quot;)
+plt.show()
+</code></pre>
+<p>The plain scatter shows the <em>extent</em> of the data and nothing about its
+<em>density</em>. Once the overplotting clears, a hard ceiling appears: 965 block
+groups (4.7%) were capped at exactly $500,001.</p>
+<hr />
+<h2 id="where-a-variable-comes-from">⚖️ Where a variable comes from</h2>
+<p>Before the hands-on, we spend about fifteen minutes on a dataset we are <strong>not</strong>
+using: Boston Housing, the standard regression teaching set for forty years,
+removed from scikit-learn in version 1.2.</p>
+<p>Its <code>black</code> column does not store the proportion of Black residents per town.
+It stores <code>1000 * (Bk - 0.63) ** 2</code> — a squared term asserting that home values
+rise as a town's Black population moves away from 63% in either direction. That
+is a hypothesis somebody built into the data, not a measurement.</p>
+<p>We check the formula ourselves, plot what it does, and find that undoing the
+transform <strong>reverses the sign</strong> of the correlation with home value.</p>
+<p><strong>Download</strong> the <a href="../week10/Week10_ethics_dataset_case.ipynb">ethics case notebook</a></p>
+<p>The habit it is meant to build: read the data dictionary before you plot, and
+plot the variable itself — not only its relationship to your outcome.</p>
 <hr />
 <h2 id="in-class-activity">🧪 In-Class Activity</h2>
 <ul>
