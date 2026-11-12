@@ -61,7 +61,7 @@ without a network connection.
 3. Simple regression and confidence intervals (20 min)
 4. Interpreting model fit and residuals visually (20 min)
 5. Visual pitfalls: spurious correlation, overfitting, and omitted variables (10 min)
-6. **Download** [everything for this week as one zip](week10/week10.zip) — both notebooks plus the `data/` folder they read from
+6. **Download** [everything for this week as one zip](week10/week10.zip) — all the notebooks plus the `data/` folder they read from
 7. Or the [modeling notebook](week10/Week10_relationships_modeling.ipynb) on its own, with [`ames.csv`](week10/data/ames.csv) and [`california.csv`](week10/data/california.csv) saved into a `data/` folder beside it
 
 ### Session 2 (75 min — Hands-on Focus)
@@ -71,8 +71,8 @@ without a network connection.
 3. Building an OLS regression model with Statsmodels (20 min)
 4. Visualizing residuals and diagnostic plots (15 min)
 5. Mini‑workshop: interpret one key relationship in your dataset (5 min)
-6. Continue in the same [modeling notebook](week10/Week10_relationships_modeling.ipynb) — it covers both sessions
-7. A **Working version of linked plotly plot** can be [downloaded here](week10/linked_plotly_plots.ipynb)
+6. **Download** the [hands-on notebook](week10/Week10_relationships_modeling_2.ipynb) — seaborn, Altair and Plotly on the Ames data. It loads the data from the course site if you do not have the `data/` folder.
+7. A **Working version of linked plotly plot** can be [downloaded here](week10/linked_plotly_plots.ipynb) — select points in either chart and they are highlighted in the other
 
 ---
 
