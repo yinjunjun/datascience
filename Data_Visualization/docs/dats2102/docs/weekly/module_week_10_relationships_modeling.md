@@ -72,7 +72,7 @@ without a network connection.
 4. Visualizing residuals and diagnostic plots (15 min)
 5. Mini‑workshop: interpret one key relationship in your dataset (5 min)
 6. **Download** the [hands-on notebook](week10/Week10_relationships_modeling_2.ipynb) — seaborn, Altair and Plotly on the Ames data. It loads the data from the course site if you do not have the `data/` folder.
-7. A **Working version of linked plotly plot** can be [downloaded here](week10/linked_plotly_plots.ipynb) — select points in either chart and they are highlighted in the other
+7. A **Working version of the linked plots**, in Plotly and in Altair, can be [downloaded here](week10/linked_plotly_plots.ipynb) — select points in either chart and they are highlighted in the other
 
 ---
 
