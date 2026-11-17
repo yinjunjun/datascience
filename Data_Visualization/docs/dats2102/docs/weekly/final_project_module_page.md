@@ -132,6 +132,6 @@ Before submitting on Blackboard, ensure:
 - Keep code cells small and well‑commented; use functions where helpful.
 
 ---
-## 🏠 Submission Deadline (TBD)
+## 🏠 Submission Deadline: December 15
 
 
