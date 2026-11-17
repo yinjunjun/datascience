@@ -29,6 +29,7 @@ Data visualizations often emphasize what is known—but communicating what is **
 
 **Sample Data Sources:**
 
+- Ames, Iowa home sales (the Week 10 data) — used in the hands-on notebook
 - Simulated sample means and bootstraps
 - Gapminder GDP data (yearly changes)
 - Experimental datasets (e.g., survey or sensor data)
@@ -40,8 +41,10 @@ Data visualizations often emphasize what is known—but communicating what is **
 Ensure your environment includes:
 
 ```bash
-pip install seaborn matplotlib numpy pandas scipy
+pip install numpy pandas matplotlib seaborn scipy scikit-learn plotly altair
 ```
+
+The hands-on notebook uses `scikit-learn` for resampling and for the bootstrap regression fits, `plotly` for the interactive ensemble plot, and `altair` for one optional section.
 
 Verify that Seaborn is configured to display confidence intervals and that Matplotlib renders error bars correctly.
 
@@ -63,7 +66,8 @@ Verify that Seaborn is configured to display confidence intervals and that Matpl
 2. Adding confidence bands around regression lines
 3. Simulating sampling distributions and bootstrap intervals
 4. Improve one of your previous plots by including uncertainty
-5. Download the hands-on [Jupyter Notebook](week11/week11_uncertainty_visualization.ipynb) 
+5. **Download** the hands-on [Jupyter Notebook](week11/week11_uncertainty_visualization.ipynb). It uses the Ames home sales from Week 10 and loads them from the course site, or from [`ames.csv`](week11/data/ames.csv) saved into a `data/` folder beside it.
+
 ---
 
 ## 💻 Starter Notebook Snippets
@@ -80,35 +84,68 @@ groups = ['A','B','C','D']
 means = [20, 23, 25, 22]
 se = [1.5, 2.0, 1.2, 1.8]
 
-plt.bar(groups, means, yerr=se, capsize=5, color='#4e79a7')
+plt.bar(groups, means, yerr=se, capsize=5, color='steelblue')
 plt.title('Bar chart with error bars')
 plt.ylabel('Mean value')
 plt.show()
 ```
 
-### Confidence intervals with Seaborn
+### Group means with a 95% confidence interval
 
 ```python
 import seaborn as sns
-penguins = sns.load_dataset('penguins').dropna()
-sns.lmplot(data=penguins, x='flipper_length_mm', y='body_mass_g', ci=95)
-plt.title('Regression with 95% confidence interval')
+
+df = pd.read_csv("data/ames.csv")
+
+# Six groups of homes by living area, each with about the same number of homes
+df["area_bin"] = pd.qcut(df["GrLivArea"], q=6, duplicates="drop")
+
+sns.barplot(data=df, x="area_bin", y="SalePrice", errorbar=('ci', 95), capsize=.15)
+plt.xticks(rotation=15, ha="right")
+plt.xlabel("Living area (sq ft) — quantile bins")
+plt.ylabel("Sale price ($)")
+plt.title("Mean Sale Price by Living Area with 95% CI")
 plt.show()
 ```
 
-### Bootstrap sampling visualization
+The interval on the last bar is the widest: the largest homes vary the most in
+price, so their mean is the least certain.
+
+### Confidence band around a regression line
 
 ```python
-np.random.seed(42)
-data = np.random.normal(50, 10, 100)
-bootstrap_means = [np.mean(np.random.choice(data, size=100, replace=True)) for _ in range(1000)]
+ci = 95     # try 70, then 99, and watch the band change width
 
-sns.histplot(bootstrap_means, kde=True)
-plt.axvline(np.mean(data), color='red', linestyle='--', label='Observed mean')
-plt.title('Bootstrap sampling distribution of the mean')
+g = sns.lmplot(data=df, x="GrLivArea", y="SalePrice", ci=ci,
+               height=4.5, aspect=1.4, scatter_kws={"alpha": 0.5})
+g.fig.suptitle(f"Regression with {ci}% Confidence Interval", y=1.03)
+plt.show()
+```
+
+The band is the uncertainty in the **line**, not in where one home will fall. It
+is narrow in the middle, where most homes are, and widens toward the large homes.
+
+### Bootstrap sampling distribution
+
+```python
+from sklearn.utils import resample
+
+means = []
+for i in range(1000):
+    sample = resample(df["SalePrice"], random_state=i)
+    means.append(sample.mean())
+
+sns.histplot(means, kde=True, bins=30)
+plt.axvline(np.mean(means), color='red', linestyle='--', label='Bootstrap mean')
+plt.xlabel("Mean sale price ($)")
+plt.title("Bootstrap Distribution of Mean Sale Price (1000 resamples)")
 plt.legend()
 plt.show()
 ```
+
+Each resample draws 1,460 homes from the data with replacement and records the
+mean. The spread of those 1,000 means shows how much the average would move if
+we had sampled a different set of homes.
 
 ---
 

@@ -145,6 +145,7 @@
 </ul>
 <p><strong>Sample Data Sources:</strong></p>
 <ul>
+<li>Ames, Iowa home sales (the Week 10 data) — used in the hands-on notebook</li>
 <li>Simulated sample means and bootstraps</li>
 <li>Gapminder GDP data (yearly changes)</li>
 <li>Experimental datasets (e.g., survey or sensor data)</li>
@@ -152,8 +153,9 @@
 <hr />
 <h2 id="setup-checklist">🛠️ Setup Checklist</h2>
 <p>Ensure your environment includes:</p>
-<pre><code class="language-bash">pip install seaborn matplotlib numpy pandas scipy
+<pre><code class="language-bash">pip install numpy pandas matplotlib seaborn scipy scikit-learn plotly altair
 </code></pre>
+<p>The hands-on notebook uses <code>scikit-learn</code> for resampling and for the bootstrap regression fits, <code>plotly</code> for the interactive ensemble plot, and <code>altair</code> for one optional section.</p>
 <p>Verify that Seaborn is configured to display confidence intervals and that Matplotlib renders error bars correctly.</p>
 <hr />
 <h2 id="lecture-outline">🧭 Lecture Outline</h2>
@@ -171,7 +173,7 @@
 <li>Adding confidence bands around regression lines</li>
 <li>Simulating sampling distributions and bootstrap intervals</li>
 <li>Improve one of your previous plots by including uncertainty</li>
-<li>Download the hands-on <a href="../week11/week11_uncertainty_visualization.ipynb">Jupyter Notebook</a> </li>
+<li><strong>Download</strong> the hands-on <a href="../week11/week11_uncertainty_visualization.ipynb">Jupyter Notebook</a>. It uses the Ames home sales from Week 10 and loads them from the course site, or from <a href="../week11/data/ames.csv"><code>ames.csv</code></a> saved into a <code>data/</code> folder beside it.</li>
 </ol>
 <hr />
 <h2 id="starter-notebook-snippets">💻 Starter Notebook Snippets</h2>
@@ -185,29 +187,56 @@ groups = ['A','B','C','D']
 means = [20, 23, 25, 22]
 se = [1.5, 2.0, 1.2, 1.8]
 
-plt.bar(groups, means, yerr=se, capsize=5, color='#4e79a7')
+plt.bar(groups, means, yerr=se, capsize=5, color='steelblue')
 plt.title('Bar chart with error bars')
 plt.ylabel('Mean value')
 plt.show()
 </code></pre>
-<h3 id="confidence-intervals-with-seaborn">Confidence intervals with Seaborn</h3>
+<h3 id="group-means-with-a-95-confidence-interval">Group means with a 95% confidence interval</h3>
 <pre><code class="language-python">import seaborn as sns
-penguins = sns.load_dataset('penguins').dropna()
-sns.lmplot(data=penguins, x='flipper_length_mm', y='body_mass_g', ci=95)
-plt.title('Regression with 95% confidence interval')
+
+df = pd.read_csv(&quot;data/ames.csv&quot;)
+
+# Six groups of homes by living area, each with about the same number of homes
+df[&quot;area_bin&quot;] = pd.qcut(df[&quot;GrLivArea&quot;], q=6, duplicates=&quot;drop&quot;)
+
+sns.barplot(data=df, x=&quot;area_bin&quot;, y=&quot;SalePrice&quot;, errorbar=('ci', 95), capsize=.15)
+plt.xticks(rotation=15, ha=&quot;right&quot;)
+plt.xlabel(&quot;Living area (sq ft) — quantile bins&quot;)
+plt.ylabel(&quot;Sale price ($)&quot;)
+plt.title(&quot;Mean Sale Price by Living Area with 95% CI&quot;)
 plt.show()
 </code></pre>
-<h3 id="bootstrap-sampling-visualization">Bootstrap sampling visualization</h3>
-<pre><code class="language-python">np.random.seed(42)
-data = np.random.normal(50, 10, 100)
-bootstrap_means = [np.mean(np.random.choice(data, size=100, replace=True)) for _ in range(1000)]
+<p>The interval on the last bar is the widest: the largest homes vary the most in
+price, so their mean is the least certain.</p>
+<h3 id="confidence-band-around-a-regression-line">Confidence band around a regression line</h3>
+<pre><code class="language-python">ci = 95     # try 70, then 99, and watch the band change width
 
-sns.histplot(bootstrap_means, kde=True)
-plt.axvline(np.mean(data), color='red', linestyle='--', label='Observed mean')
-plt.title('Bootstrap sampling distribution of the mean')
+g = sns.lmplot(data=df, x=&quot;GrLivArea&quot;, y=&quot;SalePrice&quot;, ci=ci,
+               height=4.5, aspect=1.4, scatter_kws={&quot;alpha&quot;: 0.5})
+g.fig.suptitle(f&quot;Regression with {ci}% Confidence Interval&quot;, y=1.03)
+plt.show()
+</code></pre>
+<p>The band is the uncertainty in the <strong>line</strong>, not in where one home will fall. It
+is narrow in the middle, where most homes are, and widens toward the large homes.</p>
+<h3 id="bootstrap-sampling-distribution">Bootstrap sampling distribution</h3>
+<pre><code class="language-python">from sklearn.utils import resample
+
+means = []
+for i in range(1000):
+    sample = resample(df[&quot;SalePrice&quot;], random_state=i)
+    means.append(sample.mean())
+
+sns.histplot(means, kde=True, bins=30)
+plt.axvline(np.mean(means), color='red', linestyle='--', label='Bootstrap mean')
+plt.xlabel(&quot;Mean sale price ($)&quot;)
+plt.title(&quot;Bootstrap Distribution of Mean Sale Price (1000 resamples)&quot;)
 plt.legend()
 plt.show()
 </code></pre>
+<p>Each resample draws 1,460 homes from the data with replacement and records the
+mean. The spread of those 1,000 means shows how much the average would move if
+we had sampled a different set of homes.</p>
 <hr />
 <h2 id="in-class-activity">🧪 In-Class Activity</h2>
 <ul>
